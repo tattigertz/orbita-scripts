@@ -44,7 +44,6 @@
     line-height: 1.7;
   }
 
-  /* SIDEBAR NAV */
   .layout { display: flex; min-height: 100vh; }
 
   .sidebar {
@@ -106,7 +105,6 @@
   }
   .nav-icon { font-size: 16px; opacity: 0.8; }
 
-  /* MAIN CONTENT */
   .main {
     flex: 1;
     padding: 40px 48px;
@@ -116,7 +114,6 @@
   .panel { display: none; }
   .panel.active { display: block; }
 
-  /* PAGE HEADER */
   .page-header {
     margin-bottom: 36px;
     padding-bottom: 24px;
@@ -138,7 +135,6 @@
     line-height: 1.3;
   }
 
-  /* STEP MARKER */
   .step {
     display: flex;
     gap: 16px;
@@ -173,30 +169,25 @@
     margin-bottom: 10px;
   }
 
-  /* TEXT STYLES */
   .script-text { font-size: 15px; line-height: 1.8; color: var(--text); margin-bottom: 14px; }
   .script-text:last-child { margin-bottom: 0; }
   .script-text b { font-weight: 600; }
 
-  /* CALLOUTS */
   .callout { border-radius: 8px; padding: 12px 16px; margin: 14px 0; font-size: 14px; line-height: 1.75; }
   .callout-purple { background: var(--purple-50); border-left: 3px solid var(--purple-600); color: var(--purple-900); border-radius: 0 8px 8px 0; }
   .callout-amber { background: var(--amber-50); border-left: 3px solid var(--amber-600); color: var(--amber-900); border-radius: 0 8px 8px 0; }
   .callout-green { background: var(--green-50); border-left: 3px solid var(--green-600); color: var(--green-900); border-radius: 0 8px 8px 0; }
   .callout-blue { background: var(--blue-50); border-left: 3px solid var(--blue-600); color: var(--blue-900); border-radius: 0 8px 8px 0; }
 
-  /* INLINE HIGHLIGHTS */
   .hl { background: var(--purple-50); color: var(--purple-800); padding: 1px 5px; border-radius: 4px; font-weight: 500; font-size: 14px; }
   .hl-warn { background: var(--amber-50); color: var(--amber-600); padding: 1px 5px; border-radius: 4px; font-weight: 500; font-size: 14px; }
   .hl-green { background: var(--green-50); color: var(--green-600); padding: 1px 5px; border-radius: 4px; font-weight: 500; font-size: 14px; }
 
-  /* QUESTION LIST */
   .q-list { list-style: none; margin: 10px 0; }
   .q-list li { padding: 8px 0 8px 16px; border-bottom: 1px solid var(--gray-100); font-size: 14.5px; color: var(--text); position: relative; }
   .q-list li:last-child { border-bottom: none; }
   .q-list li::before { content: '—'; position: absolute; left: 0; color: var(--gray-200); font-weight: 600; }
 
-  /* PRICE CARDS */
   .price-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 16px 0; }
   .price-card { border: 1px solid var(--border); border-radius: 10px; padding: 16px; background: var(--surface); }
   .price-card.rec { border: 2px solid var(--purple-600); }
@@ -205,10 +196,8 @@
   .price-amount { font-size: 24px; font-weight: 600; color: var(--purple-800); margin-bottom: 6px; letter-spacing: -0.5px; }
   .price-desc { font-size: 12.5px; color: var(--text-muted); line-height: 1.6; }
 
-  /* SECTION DIVIDER */
   .divider { border: none; border-top: 1px solid var(--border); margin: 28px 0; }
 
-  /* MOBILE */
   @media (max-width: 700px) {
     .sidebar { display: none; }
     .main { padding: 24px 20px; }
@@ -220,17 +209,15 @@
   }
   @media (min-width: 701px) { .mobile-nav { display: none; } }
 
-  /* AUTH */
-  #auth-screen { position: fixed; inset: 0; background: #1A1917; display: flex; align-items: center; justify-content: center; z-index: 9999; font-family: 'Inter', sans-serif; }
+  /* AUTH SCREEN */
+  #auth-screen { position: fixed; inset: 0; background: #1A1917; display: flex; align-items: center; justify-content: center; z-index: 9999; }
   #auth-screen.hidden { display: none; }
   .auth-box { background: #26215C; border-radius: 16px; padding: 40px 36px; width: 360px; max-width: 90vw; }
   .auth-logo { font-size: 20px; font-weight: 600; color: #fff; margin-bottom: 6px; }
   .auth-sub { font-size: 13px; color: rgba(255,255,255,0.45); margin-bottom: 28px; }
   .auth-label { font-size: 12px; font-weight: 500; color: rgba(255,255,255,0.55); text-transform: uppercase; letter-spacing: .5px; margin-bottom: 6px; display: block; }
-  .auth-input { width: 100%; padding: 10px 14px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.15); background: rgba(255,255,255,0.07); color: #fff; font-size: 14px; font-family: inherit; margin-bottom: 16px; outline: none; }
-  .auth-input:focus { border-color: rgba(255,255,255,0.4); }
-  .auth-btn { width: 100%; padding: 11px; background: #534AB7; color: #fff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer; font-family: inherit; transition: background .15s; }
-  .auth-btn:hover { background: #3C3489; }
+  .auth-input { width: 100%; padding: 10px 14px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.15); background: rgba(255,255,255,0.07); color: #fff; font-size: 14px; margin-bottom: 16px; outline: none; }
+  .auth-btn { width: 100%; padding: 11px; background: #534AB7; color: #fff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer; }
   .auth-error { font-size: 13px; color: #F09595; margin-top: 12px; text-align: center; min-height: 18px; }
 
   /* ADMIN PANEL */
@@ -241,24 +228,25 @@
   .del-btn:hover { background: #F09595; color: #fff; }
   .add-row { display: grid; grid-template-columns: 1fr 1fr auto; gap: 10px; align-items: end; margin-top: 20px; }
   .add-row input { padding: 9px 12px; border: 1px solid var(--border); border-radius: 8px; font-size: 13.5px; background: var(--surface); color: var(--text); }
-  .add-btn { padding: 9px 16px; background: #26215C; color: #EEEDFE; border: none; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer; white-space: nowrap; }
-  .add-btn:hover { background: #3C3489; }
-  .logout-btn { font-size: 12px; color: rgba(255,255,255,0.45); background: none; border: none; cursor: pointer; padding: 8px 20px; font-family: inherit; width: 100%; text-align: left; }
-  .logout-btn:hover { color: rgba(255,255,255,0.8); }
+  .add-btn { padding: 9px 16px; background: #26215C; color: #EEEDFE; border: none; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer; }
+  .logout-btn { font-size: 12px; color: rgba(255,255,255,0.45); background: none; border: none; cursor: pointer; padding: 8px 20px; width: 100%; text-align: left; }
   
   .admin-only { display: none !important; }
   a.admin-only.visible { display: flex !important; }
   div.admin-only.visible { display: block !important; }
 
-  /* INFOPAGE EXTRAS */
-  .prod-params{width:100%;border-collapse:collapse;margin-bottom:16px;font-size:13.5px}
-  .prod-params td{padding:8px 12px;border-bottom:1px solid var(--gray-100)}
-  .prod-params td:first-child{color:var(--text-muted);font-weight:500;text-transform:uppercase;font-size:11px;letter-spacing:.5px;width:130px}
-  .ptabs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px}
-  .ptab{padding:7px 14px;border-radius:8px;border:0.5px solid rgba(0,0,0,0.15);background:#fff;color:#5F5E5A;font-size:13px;cursor:pointer;font-family:inherit}
-  .ptab.active{background:#26215C;color:#EEEDFE;border-color:#26215C}
-  .ppanel{display:none}
-  .ppanel.active{display:block}
+  /* DOVIDNYK STYLES */
+  .prod-params { width:100%; border-collapse:collapse; margin-bottom:16px; font-size:13.5px }
+  .prod-params td { padding:8px 12px; border-bottom:1px solid var(--gray-100) }
+  .prod-params td:first-child { color:var(--text-muted); font-weight:500; text-transform:uppercase; font-size:11px; width:130px }
+  .ptabs { display:flex; flex-wrap:wrap; gap:6px; margin-bottom:20px }
+  .ptab { padding:7px 14px; border-radius:8px; border:0.5px solid rgba(0,0,0,0.15); background:#fff; color:#5F5E5A; font-size:13px; cursor:pointer; }
+  .ptab.active { background:#26215C; color:#EEEDFE; border-color:#26215C }
+  .ppanel { display:none }
+  .ppanel.active { display:block }
+  
+  #main-layout-container { display: none; }
+  #main-layout-container.visible { display: flex; }
 </style>
 </head>
 <body>
@@ -268,146 +256,248 @@
     <div class="auth-logo">🐝 Орбіта</div>
     <div class="auth-sub">Скрипти менеджера — закритий доступ</div>
     <label class="auth-label">Пошта</label>
-    <input class="auth-input" type="email" id="auth-email" placeholder="your@email.com" autocomplete="email">
+    <input class="auth-input" type="email" id="auth-email" placeholder="your@email.com">
     <label class="auth-label">Пароль</label>
-    <input class="auth-input" type="password" id="auth-pass" placeholder="••••••••" autocomplete="current-password">
+    <input class="auth-input" type="password" id="auth-pass" placeholder="••••••••">
     <button class="auth-btn" onclick="doLogin()">Увійти</button>
     <div class="auth-error" id="auth-error"></div>
   </div>
 </div>
 
-<div class="mobile-nav" id="mobileNav">
-  <div class="mobile-nav-item active" onclick="sw('bjola',0)">🐝 Бджолиний підмор</div>
-  <div class="mobile-nav-item" onclick="sw('diabet',1)">💊 Стоп Діабет</div>
-  <div class="mobile-nav-item" onclick="sw('gutsul',2)">🌿 Гуцульський збір</div>
-  <div class="mobile-nav-item" onclick="sw('zir',3)">👁️ ЗІР</div>
-  <div class="mobile-nav-item" onclick="sw('info',4)">📦 Про засоби</div>
-  <div class="mobile-nav-item" onclick="sw('zap',5)">🛡 Заперечення</div>
-</div>
+<div id="main-layout-container">
+  <div class="mobile-nav" id="mobileNav">
+    <div class="mobile-nav-item active" onclick="sw('bjola',0)">🐝 Бджолиний підмор</div>
+    <div class="mobile-nav-item" onclick="sw('diabet',1)">💊 Стоп Діабет</div>
+    <div class="mobile-nav-item" onclick="sw('gutsul',2)">🌿 Гуцульський збір</div>
+    <div class="mobile-nav-item" onclick="sw('zir',3)">👁️ ЗІР</div>
+    <div class="mobile-nav-item" onclick="sw('info',4)">📦 Про засоби</div>
+    <div class="mobile-nav-item" onclick="sw('zap',5)">🛡 Заперечення</div>
+  </div>
 
-<div class="layout">
-  <nav class="sidebar">
-    <div class="sidebar-logo">
-      <div class="company">Орбіта</div>
-      <div class="tagline">Скрипти менеджера</div>
-    </div>
-    <div class="nav-group-label">Продукти</div>
-    <a class="nav-item active" onclick="sw('bjola',0)"><span class="nav-icon">🐝</span> Бджолиний підмор</a>
-    <a class="nav-item" onclick="sw('diabet',1)"><span class="nav-icon">💊</span> Стоп Діабет</a>
-    <a class="nav-item" onclick="sw('gutsul',2)"><span class="nav-icon">🌿</span> Гуцульський збір</a>
-    <a class="nav-item" onclick="sw('zir',3)"><span class="nav-icon">👁️</span> ЗІР + Сила Карпат</a>
-    <div class="nav-group-label" style="margin-top:12px">Довідка</div>
-    <a class="nav-item" onclick="sw('info',4)"><span class="nav-icon">📦</span> Про засоби</a>
-    <a class="nav-item" onclick="sw('zap',5)"><span class="nav-icon">🛡</span> Заперечення</a>
-    <a class="nav-item admin-only" id="nav-admin" onclick="sw('access',6)"><span class="nav-icon">🔑</span> Доступи</a>
-    <div style="margin-top:auto;padding-top:20px">
-      <button class="logout-btn" onclick="doLogout()">Вийти з акаунту</button>
-    </div>
-  </nav>
-
-  <main class="main">
-    <div id="bjola" class="panel active">
-      <div class="page-header">
-        <div class="page-eyebrow">Скрипт продажу</div>
-        <div class="page-title">Бджолиний підмор з прополісом</div>
+  <div class="layout" style="width: 100%">
+    <nav class="sidebar">
+      <div class="sidebar-logo">
+        <div class="company">Орбіта</div>
+        <div class="tagline">Скрипти менеджера</div>
       </div>
-      <div class="step">
-        <div class="step-num">1</div>
-        <div class="step-body">
-          <div class="step-label">Привітання</div>
-          <p class="script-text">Доброго дня, <span class="hl">[ім'я клієнта]</span> (пауза). Ви залишали заявку на <span class="hl">Бджолиний підмор з прополісом</span>? (чекаємо відповідь). Мене звати <span class="hl">[ваше ім'я]</span>, Вас вітає компанія «Орбіта»...</p>
+      <div class="nav-group-label">Продукти</div>
+      <a class="nav-item active" onclick="sw('bjola',0)"><span class="nav-icon">🐝</span> Бджолиний підмор</a>
+      <a class="nav-item" onclick="sw('diabet',1)"><span class="nav-icon">💊</span> Стоп Діабет</a>
+      <a class="nav-item" onclick="sw('gutsul',2)"><span class="nav-icon">🌿</span> Гуцульський збір</a>
+      <a class="nav-item" onclick="sw('zir',3)"><span class="nav-icon">👁️</span> ЗІР + Сила Карпат</a>
+      <div class="nav-group-label" style="margin-top:12px">Довідка</div>
+      <a class="nav-item" onclick="sw('info',4)"><span class="nav-icon">📦</span> Про засоби</a>
+      <a class="nav-item" onclick="sw('zap',5)"><span class="nav-icon">🛡</span> Заперечення</a>
+      <a class="nav-item admin-only" id="nav-admin" onclick="sw('access',6)"><span class="nav-icon">🔑</span> Доступи</a>
+      <div style="margin-top:auto;padding-top:20px">
+        <button class="logout-btn" onclick="doLogout()">Вийти з акаунту</button>
+      </div>
+    </nav>
+
+    <main class="main">
+      <div id="bjola" class="panel active">
+        <div class="page-header">
+          <div class="page-eyebrow">Скрипт продажу</div>
+          <div class="page-title">Бджолиний підмор з прополісом</div>
+        </div>
+
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-label">Привітання</div>
+            <p class="script-text">Доброго дня, <span class="hl">[ім'я клієнта]</span> (пауза). Ви залишали заявку на <span class="hl">Бджолиний підмор з прополісом</span>? (чекаємо відповідь клієнта). Мене звати <span class="hl">[ваше ім'я та по батькові]</span>, Вас вітає компанія «Орбіта». Засіб концентрований, тому я задам Вам декілька питань, щоб зрозуміти, чи підходить Вам цей засіб, а також розповім, як його правильно приймати.</p>
+            <div class="callout callout-amber">Якщо питають ціну → «199 грн, це пільгова програма, АЛЕ засіб концентрований — задам кілька питань. Домовились?»</div>
+            <div class="callout callout-amber">Якщо одразу «1 упаковку» → «[Ім'я], звісно отримаєте потрібну кількість, АЛЕ засіб максимально концентрований — задам кілька питань. Домовились?»</div>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <div class="step-label">Виявлення потреб</div>
+            <p class="script-text"><b>Блок 1 — Супутні фактори</b></p>
+            <ul class="q-list">
+              <li>Скільки вам повних років?</li>
+              <li>Чи маєте шкідливі звички? Палите? Як часто вживаєте алкоголь?</li>
+              <li>Вага стабільна чи останнім часом трохи зросла?</li>
+              <li>Цукор перевіряли? Пам'ятаєте останній результат?</li>
+            </ul>
+            <div class="callout callout-purple">Чоловіки вашого віку (____ років), як правило, звертаються або з проблемами простати, або з проблемами потенції. Скажіть, будь ласка, що турбує вас?</div>
+
+            <p class="script-text" style="margin-top:16px"><b>Блок 2 — Потенція</b></p>
+            <ul class="q-list">
+              <li>Не звертали увагу, що останні півроку–рік на початку процесу або під час інколи з'являється в'ялість?</li>
+              <li>А як щодо ранкової ерекції? Не відчуваєте, що стала рідшою?</li>
+              <li>Статевий акт завершуєте швидше, ніж раніше, чи навпаки?</li>
+            </ul>
+
+            <p class="script-text" style="margin-top:16px"><b>Блок 3 — Простата</b></p>
+            <ul class="q-list">
+              <li>Час від часу турбують нічні підйоми до туалету? Скільки разів за ніч — 1–2, 2–3?</li>
+              <li>Немає відчуття, що сходили до туалету, а ніби не до кінця?</li>
+              <li>Якщо вдень виникає позив — потрібно бігти одразу, чи можете потерпіти?</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <div class="step-label">Гарантії та результат</div>
+            <p class="script-text">В упаковці буде індивідуальна схема. Наші спеціалісти розпишуть її під ваш вік. Приймаєте строго 1 раз на день зранку.</p>
+            <div class="callout callout-amber">Попереджаю відразу — на 2–3 день сеча змінить колір на темно-бурий. Це виходить застійний секрет простати та токсини.</div>
+            <div class="callout callout-green">Як тільки на 15 день сеча стане світлою — ваші судини стануть чистими та еластичними, це зніме запалення.</div>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <div class="step-label">Цінова пропозиція</div>
+            <div class="price-grid">
+              <div class="price-card rec">
+                <div class="rec-pill">Рекомендую</div>
+                <div class="price-name">Оптимальний курс · 4 упаковки · 28 днів</div>
+                <div class="price-amount">2 399 грн</div>
+                <div class="price-desc">2 упаковки зі знижкою + 2 по 199 грн. Швидке покращення потенції та кровообігу.</div>
+              </div>
+              <div class="price-card">
+                <div class="price-name">Максимальний курс · 5 упаковок · 45 днів</div>
+                <div class="price-amount">3 399 грн</div>
+                <div class="price-desc">3 упаковки зі знижкою 50% + 2 по 199 грн. Потужний стабільний результат.</div>
+              </div>
+            </div>
+            <div class="callout callout-purple">Як вам зручно — починаємо з Оптимального чи хочете зафіксувати Максимальний курс?</div>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div id="diabet" class="panel">
-      <div class="page-header">
-        <div class="page-eyebrow">Скрипт продажу</div>
-        <div class="page-title">Стоп Діабет — Гуцульський збір</div>
-      </div>
-      <div class="step">
-        <div class="step-num">1</div>
-        <div class="step-body"><p class="script-text">Контент Стоп Діабет...</p></div>
-      </div>
-    </div>
-
-    <div id="gutsul" class="panel">
-      <div class="page-header">
-        <div class="page-eyebrow">Скрипт продажу</div>
-        <div class="page-title">Гуцульський збір (простата / потенція)</div>
-      </div>
-      <div class="step">
-        <div class="step-num">1</div>
-        <div class="step-body"><p class="script-text">Контент Гуцульського збору...</p></div>
-      </div>
-    </div>
-
-    <div id="zir" class="panel">
-      <div class="page-header">
-        <div class="page-eyebrow">Скрипт продажу</div>
-        <div class="page-title">ЗІР + Сила Карпат (Відновлення зору)</div>
-      </div>
-      <div class="step">
-        <div class="step-num">1</div>
-        <div class="step-body"><p class="script-text">Контент ЗІР...</p></div>
-      </div>
-    </div>
-
-    <div id="info" class="panel">
-      <div class="page-header">
-        <div class="page-eyebrow">Довідник</div>
-        <div class="page-title">Інформація про засоби</div>
-      </div>
-      <p class="script-text">Тут розміщується інформація про склад та властивості препаратів.</p>
-    </div>
-
-    <div id="zap" class="panel">
-      <div class="page-header">
-        <div class="page-eyebrow">Довідник</div>
-        <div class="page-title">Робота із запереченнями</div>
-      </div>
-      <p class="script-text">Основні тези та методи відпрацювання сумнівів клієнта.</p>
-    </div>
-
-    <div id="access" class="panel admin-only">
-      <div class="page-header">
-        <div class="page-eyebrow">Управління командою</div>
-        <div class="page-title">Контроль доступів менеджерів</div>
-      </div>
-      
-      <table class="admin-table">
-        <thead>
-          <tr>
-            <th>Email</th>
-            <th>Роль</th>
-            <th>Статус</th>
-            <th>Дія</th>
-          </tr>
-        </thead>
-        <tbody id="users-list">
-          </tbody>
-      </table>
-
-      <div class="add-row">
-        <div>
-          <label class="auth-label" style="color:var(--text); margin-bottom:4px">Новий Email</label>
-          <input type="email" id="new-email" placeholder="manager@orbita.com" style="width:100%">
+      <div id="diabet" class="panel">
+        <div class="page-header">
+          <div class="page-eyebrow">Скрипт продажу</div>
+          <div class="page-title">Стоп Діабет — Гуцульський збір</div>
         </div>
-        <div>
-          <label class="auth-label" style="color:var(--text); margin-bottom:4px">Пароль</label>
-          <input type="text" id="new-pass" placeholder="Створити пароль" style="width:100%">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <div class="step-label">Привітання та аналіз</div>
+            <p class="script-text">Доброго дня, <span class="hl">[ім'я клієнта]</span>. Ви залишали заявку на «Гуцульський збір для стабілізації цукру»? Даний засіб є концентрованим, тому використовується по чіткому дозуванню.</p>
+            <ul class="q-list">
+              <li>Цукровий діабет у вас першого типу чи другого?</li>
+              <li>Коли останній раз здавали аналізи цукру? Які показники?</li>
+              <li>Що саме турбує: погіршення зору / втрата ваги / сухість / нирки / суглоби?</li>
+            </ul>
+            <div class="callout callout-amber">На 5–7 день виходить цукровий шлак — капіляри очищуються. З 15-го дня починається відновлення клітин підшлункової залози.</div>
+            <div class="price-grid">
+              <div class="price-card rec">
+                <div class="rec-pill">Рекомендую</div>
+                <div class="price-name">Оптимальний курс · 4 упаковки</div>
+                <div class="price-amount">1 799 грн</div>
+              </div>
+            </div>
+          </div>
         </div>
-        <button class="add-btn" onclick="createUser()">Додати акаунт</button>
       </div>
-    </div>
-  </main>
+
+      <div id="gutsul" class="panel">
+        <div class="page-header">
+          <div class="page-eyebrow">Скрипт продажу</div>
+          <div class="page-title">Гуцульський збір (простата / потенція)</div>
+        </div>
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <p class="script-text">Доброго дня, ви залишали заявку на Гуцульський збір? Засіб натуральний, збирається в екологічних регіонах Карпат і працює накопичувально на відновлення сечостатевої системи.</p>
+            <div class="price-grid">
+              <div class="price-card rec">
+                <div class="price-name">Оптимальний курс · 4 упаковки</div>
+                <div class="price-amount">2 199 грн</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="zir" class="panel">
+        <div class="page-header">
+          <div class="page-eyebrow">Скрипт продажу</div>
+          <div class="page-title">ЗІР + Сила Карпат (Відновлення зору)</div>
+        </div>
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <p class="script-text">Доброго дня! Заявка на засіб ЗІР + Сила Карпат для відновлення кришталика та сітківки. Підкажіть, у вас катаракта, глаукома чи вікове зниження гостроти зору?</p>
+            <div class="callout callout-green">Перші 14 днів стабілізується внутрішньоочний тиск. Після 21 дня зір відновлюється на 25-30% за рахунок зміцнення зорового нерва.</div>
+            <div class="price-grid">
+              <div class="price-card rec">
+                <div class="price-name">Оптимальний курс · 4 упаковки</div>
+                <div class="price-amount">1 799 грн</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="info" class="panel">
+        <div class="page-header">
+          <div class="page-eyebrow">Довідник</div>
+          <div class="page-title">Інформація про засоби</div>
+        </div>
+        <div class="ptabs">
+          <button class="ptab active">🐝 Бджолиний підмор</button>
+          <button class="ptab">🌿 Гуцульський чай</button>
+          <button class="ptab">💊 Стоп Діабет</button>
+        </div>
+        <p class="script-text">Тут зібрані детальні склади та сертифікати концентратів.</p>
+      </div>
+
+      <div id="zap" class="panel">
+        <div class="page-header">
+          <div class="page-eyebrow">Довідник</div>
+          <div class="page-title">Робота із запереченнями</div>
+        </div>
+        <div class="callout callout-purple"><b>Дорого:</b> «Я вас розумію, але це повний курс екстрактів, який замінює пів року лікування хімією з аптек.»</div>
+        <div class="callout callout-amber"><b>Пробний курс:</b> Оформлюємо 2 упаковки на 14 днів для перших результатів.</div>
+      </div>
+
+      <div id="access" class="panel admin-only">
+        <div class="page-header">
+          <div class="page-eyebrow">Управління командою</div>
+          <div class="page-title">Контроль доступів менеджерів</div>
+        </div>
+        
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>Email</th>
+              <th>Роль</th>
+              <th>Статус</th>
+              <th>Дія</th>
+            </tr>
+          </thead>
+          <tbody id="users-list"></tbody>
+        </table>
+
+        <div class="add-row">
+          <div>
+            <label class="auth-label" style="color:var(--text); margin-bottom:4px">Новий Email</label>
+            <input type="email" id="new-email" placeholder="manager@orbita.com">
+          </div>
+          <div>
+            <label class="auth-label" style="color:var(--text); margin-bottom:4px">Пароль</label>
+            <input type="text" id="new-pass" placeholder="Пароль">
+          </div>
+          <button class="add-btn" onclick="createUser()">Додати акаунт</button>
+        </div>
+      </div>
+    </main>
+  </div>
 </div>
 
 <script>
   let currentUser = null;
   let checkSessionInterval = null;
 
-  // 1. АВТЕНТИФІКАЦІЯ ТА ВХІД
   async function doLogin() {
     const email = document.getElementById('auth-email').value.trim();
     const pass = document.getElementById('auth-pass').value.trim();
@@ -440,37 +530,33 @@
         return;
       }
 
-      // Зберігаємо сесію локально
       localStorage.setItem('orbita_user', JSON.stringify(currentUser));
       initUserSession();
 
     } catch (err) {
-      errorDiv.innerText = 'Помилка з\'єднання з сервером';
+      errorDiv.innerText = 'Помилка сервера або відсутній файл функцій';
     }
   }
 
   function initUserSession() {
     document.getElementById('auth-screen').classList.add('hidden');
+    document.getElementById('main-layout-container').classList.add('visible');
     
-    // Перевіряємо роль адміна
     if (currentUser.role === 'admin') {
-      document.querySelectorAll('.admin-only').forEach(el => {
-        if (el.tagName === 'A') el.classList.add('visible');
-        else el.classList.add('visible');
-      });
+      document.querySelectorAll('.admin-only').forEach(el => el.classList.add('visible'));
       loadUsersList();
+    } else {
+      document.querySelectorAll('.admin-only').forEach(el => el.classList.remove('visible'));
     }
 
-    // Запускаємо фонову перевірку статусу блокування кожні 15 секунд
     if (checkSessionInterval) clearInterval(checkSessionInterval);
-    checkSessionInterval = setInterval(checkUserStatus, 15000);
+    checkSessionInterval = setInterval(checkUserStatus, 15000); // Швидка фонова перевірка кожні 15 сек
   }
 
-  // 2. МОМЕНТАЛЬНА ФОНОВА ПЕРЕВІРКА НА БЛОКУВАННЯ (викидає протягом макс. 15-30 сек)
   async function checkUserStatus() {
     if (!currentUser) return;
     try {
-      const response = await fetch('/.netlify/functions/users?email=' + encodeURIComponent(currentUser.email));
+      const response = await fetch('/.netlify/functions/users');
       if (response.ok) {
         const data = await response.json();
         const serverUser = data.users ? data.users.find(u => u.email === currentUser.email) : null;
@@ -485,18 +571,16 @@
     }
   }
 
-  // 3. ВИХІД З АКАУНТУ
   function doLogout() {
     currentUser = null;
     localStorage.removeItem('orbita_user');
     if (checkSessionInterval) clearInterval(checkSessionInterval);
     
     document.getElementById('auth-screen').classList.remove('hidden');
-    document.querySelectorAll('.admin-only').forEach(el => el.classList.remove('visible'));
+    document.getElementById('main-layout-container').classList.remove('visible');
     sw('bjola', 0);
   }
 
-  // 4. ПЕРЕМИКАННЯ ВКЛАДОК (НАВІГАЦІЯ)
   function sw(panelId, idx) {
     document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
     const targetPanel = document.getElementById(panelId);
@@ -511,7 +595,6 @@
     if (mobItems[idx]) mobItems[idx].classList.add('active');
   }
 
-  // 5. АДМІНІСТРУВАННЯ: ВИВЕДЕННЯ СПИСКУ КОРИСТУВАЧІВ
   async function loadUsersList() {
     if (!currentUser || currentUser.role !== 'admin') return;
     try {
@@ -522,7 +605,7 @@
 
       if (data.users) {
         data.users.forEach(user => {
-          if (user.email === 'admin@orbita.com') return; // Приховуємо головного адміна від видалення
+          if (user.email === 'admin@orbita.com') return;
 
           const tr = document.createElement('tr');
           tr.innerHTML = `
@@ -543,13 +626,12 @@
     }
   }
 
-  // 6. АДМІНІСТРУВАННЯ: СТВОРЕННЯ НОВОГО МЕНЕДЖЕРА
   async function createUser() {
     const email = document.getElementById('new-email').value.trim();
     const pass = document.getElementById('new-pass').value.trim();
 
     if (!email || !pass) {
-      alert('Будь ласка, заповніть логін і пароль менеджера!');
+      alert('Будь ласка, заповніть логін і пароль!');
       return;
     }
 
@@ -561,7 +643,7 @@
       });
       
       if (response.ok) {
-        alert('Користувача успішно додано!');
+        alert('Користувача додано!');
         document.getElementById('new-email').value = '';
         document.getElementById('new-pass').value = '';
         loadUsersList();
@@ -574,7 +656,6 @@
     }
   }
 
-  // 7. АДМІНІСТРУВАННЯ: ЗМІНА СТАТУСУ (БЛОКУВАННЯ / РОЗБЛОКУВАННЯ)
   async function toggleBlockUser(email, currentStatus) {
     const nextStatus = currentStatus === 'blocked' ? 'active' : 'blocked';
     try {
@@ -591,11 +672,10 @@
     }
   }
 
-  // ПЕРЕВІРКА НАЯВНОСТІ СЕСІЇ ПРИ ЗАВАНТАЖЕННІ
   window.addEventListener('DOMContentLoaded', () => {
     const savedUser = localStorage.getItem('orbita_user');
     if (savedUser) {
-      currentUser = JSON.stringify(savedUser);
+      currentUser = JSON.parse(savedUser);
       initUserSession();
     }
   });
