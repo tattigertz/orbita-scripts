@@ -417,8 +417,9 @@
   <div class="mobile-nav-item active" onclick="sw('bjola',0)">🐝 Бджолиний підмор</div>
   <div class="mobile-nav-item" onclick="sw('diabet',1)">💊 Стоп Діабет</div>
   <div class="mobile-nav-item" onclick="sw('gutsul',2)">🌿 Гуцульський збір</div>
-  <div class="mobile-nav-item" onclick="sw('info',3)">📦 Про засоби</div>
-  <div class="mobile-nav-item" onclick="sw('zap',4)">🛡 Заперечення</div>
+  <div class="mobile-nav-item" onclick="sw('zir',3)">👁️ ЗІР + Сила Карпат</div>
+  <div class="mobile-nav-item" onclick="sw('info',4)">📦 Про засоби</div>
+  <div class="mobile-nav-item" onclick="sw('zap',5)">🛡 Заперечення</div>
 </div>
 
 <div class="layout">
@@ -432,10 +433,11 @@
     <a class="nav-item active" onclick="sw('bjola',0)"><span class="nav-icon">🐝</span> Бджолиний підмор</a>
     <a class="nav-item" onclick="sw('diabet',1)"><span class="nav-icon">💊</span> Стоп Діабет</a>
     <a class="nav-item" onclick="sw('gutsul',2)"><span class="nav-icon">🌿</span> Гуцульський збір</a>
+    <a class="nav-item" onclick="sw('zir',3)"><span class="nav-icon">👁️</span> ЗІР + Сила Карпат</a>
     <div class="nav-group-label" style="margin-top:12px">Довідка</div>
-    <a class="nav-item" onclick="sw('info',3)"><span class="nav-icon">📦</span> Про засоби</a>
-    <a class="nav-item" onclick="sw('zap',4)"><span class="nav-icon">🛡</span> Заперечення</a>
-    <a class="nav-item admin-only" id="nav-admin" onclick="sw('access',5)"><span class="nav-icon">🔑</span> Доступи</a>
+    <a class="nav-item" onclick="sw('info',4)"><span class="nav-icon">📦</span> Про засоби</a>
+    <a class="nav-item" onclick="sw('zap',5)"><span class="nav-icon">🛡</span> Заперечення</a>
+    <a class="nav-item admin-only" id="nav-admin" onclick="sw('access',6)"><span class="nav-icon">🔑</span> Доступи</a>
     <div style="margin-top:auto;padding-top:20px">
       <button class="logout-btn" onclick="doLogout()">Вийти з акаунту</button>
     </div>
@@ -443,7 +445,6 @@
 
   <main class="main">
 
-    <!-- ===== БДЖОЛИНИЙ ПІДМОР ===== -->
     <div id="bjola" class="panel active">
       <div class="page-header">
         <div class="page-eyebrow">Скрипт продажу</div>
@@ -463,7 +464,7 @@
       <div class="step">
         <div class="step-num">2</div>
         <div class="step-body">
-          <div class="step-label">Виявлення потреб</div>
+          <div class="step-label">Виявлення потреба</div>
           <p class="script-text"><b>Блок 1 — Супутні фактори</b></p>
           <ul class="q-list">
             <li>Скільки вам повних років?</li>
@@ -574,13 +575,12 @@
           <div class="step-label">Оформлення замовлення</div>
           <p class="script-text">Підкажіть, будь ласка, ваше прізвище та ім'я по батькові і <span class="hl">населений пункт</span> куди відправляємо ваш препарат?</p>
           <p class="script-text">Ви замовили ___ (озвучуємо кошик/кількість). Сума вашого замовлення складе _____ + послуги Нової пошти.</p>
-          <div class="callout callout-purple">[Ім'я], до основного курсу ми додаємо додатковий подарунок — абсолютно безкоштовно, який окремо не продається і йде тільки в комплекті. Впевнений(а), що вам сподобається.</div>
+          <div class="callout callout-purple">[Ім'я], до основного курсу мы додаємо додатковий подарунок — абсолютно безкоштовно, який окремо не продається і йде тільки в комплекті. Впевнений(а), що вам сподобається.</div>
           <div class="callout callout-green">[Ім'я], Ваше замовлення формується і відправляється протягом доби. Ми обов'язково повідомимо Вам коли посилка буде на пошті. Чи залишилися у Вас якісь питання? Добре, тоді бажаю Вам гарного відновлення та міцного здоров'я! На все добре!</div>
         </div>
       </div>
     </div>
 
-    <!-- ===== СТОП ДІАБЕТ ===== -->
     <div id="diabet" class="panel">
       <div class="page-header">
         <div class="page-eyebrow">Скрипт продажу</div>
@@ -701,7 +701,6 @@
       </div>
     </div>
 
-    <!-- ===== ГУЦУЛЬСЬКИЙ ЗБІР ===== -->
     <div id="gutsul" class="panel">
       <div class="page-header">
         <div class="page-eyebrow">Скрипт продажу</div>
@@ -796,7 +795,7 @@
           <div class="callout callout-purple">[Ім'я], я вас чую і розумію сумніви. Але давайте чесно. Якби цей засіб не працював — він би давно зник з ринку. А він з 2012 року стабільно продається і має постійних клієнтів. Це не хімія, яка дає разовий ефект, а натуральна формула, що відновлює функцію зсередини.</div>
           <p class="script-text">Чоловіки, які пройшли курс Гуцульського збору:<br>
           — <span class="hl-green">припинили вставати вночі по 3–4 рази</span><br>
-          — <span class="hl-green">повернули якісний секс без «збоїв», без нервів і акту тривалістю 2 хв</span><br>
+          — <span class="hl-green">повернули якісний sex без «збоїв», без нервів і акту тривалістю 2 хв</span><br>
           — <span class="hl-green">отримали впевненість, якої не було роками</span></p>
           <div class="callout callout-blue">Це не обіцянки — це відгуки живих людей, які повертаються за повторним курсом через 4–5 років.</div>
           <p class="script-text">Зараз замість 4 299 грн — лише <span class="hl">2 199 грн</span>. Це в три рази менше, ніж в аптеці, а ефект той самий — реальний.</p>
@@ -823,13 +822,136 @@
           <div class="step-label">Оформлення замовлення</div>
           <p class="script-text">Підкажіть прізвище та ім'я по батькові і <span class="hl">населений пункт</span>?</p>
           <p class="script-text">Ви замовили ___ (озвучуємо кошик). Сума _____ + послуги Нової пошти.</p>
-          <div class="callout callout-amber">[Ім'я], оскільки замовляєте по пільговій програмі — укладаємо договір під запис розмови. З нашої сторони — контроль якості та пересилки. З вашої — вчасно забрати та дотримуватись дозування. <b>Підтверджуєте оформлення? (ОТРИМАТИ ЧІТКУ ВІДПОВІДЬ!)</b></div>
+          <div class="callout callout-amber">[Ім'я], оскільки замовляєте по пільговій програмі — укладаємо договір под запис розмови. З нашої сторони — контроль якості та пересилки. З вашої — вчасно забрати та дотримуватись дозування. <b>Підтверджуєте оформлення? (ОТРИМАТИ ЧІТКУ ВІДПОВІДЬ!)</b></div>
           <div class="callout callout-green">Замовлення формується і відправляється протягом доби. Повідомимо коли посилка буде на пошті. Бажаю гарного відновлення та міцного здоров'я! На все добре!</div>
         </div>
       </div>
     </div>
 
-    <!-- ===== ПРО ЗАСОБИ ===== -->
+    <div id="zir" class="panel">
+      <div class="page-header">
+        <div class="page-eyebrow">Скрипт продажу</div>
+        <div class="page-title">ЗІР + Сила Карпат (Відновлення зору)</div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <div class="step-label">Привітання</div>
+          <p class="script-text">Доброго дня, <span class="hl">[ім’я клієнта]</span> (пауза). Ви залишали заявку на <span class="hl">ЗАСІБ ЗІР + Сила Карпат</span> для відновлення зору? (чекаємо відповідь клієнта).</p>
+          <p class="script-text">Мене звати, <span class="hl">[ваше ім’я та по батькові]</span>, Вас вітає компанія <b>«ОРБІТА» (в місті Ужгород)</b>.</p>
+          <div class="callout callout-amber">
+            <b>ЯКЩО ВІДРАЗУ "ТАК МЕНІ ТІЛЬКИ 1 УПАКОВКУ":</b><br>
+            — 1 упаковка коштує 199 грн. <span class="hl">[Ім'я клієнта]</span>, ви отримаєте ту кількість, яка вам необхідна. Але засіб концентрований, тому я задам вам декілька питань, щоб з'ясувати чи підходить вам цей засіб, чи ні. <i>(Переходимо до питання "скільки років")</i>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <div class="step-label">Виявлення потреб</div>
+          <p class="script-text">Даний засіб є концентрованим, тому я задам вам декілька питань, щоб зрозуміти чи підходить він вам, чи ні, добре?</p>
+          <ul class="q-list">
+            <li><b>1.</b> Для підбору дозування і для розуміння зношеності кришталика — підкажіть скільки вам повних років?</li>
+            <li><b>1.1.</b> На здоров’я очей впливає артеріальний тиск, чи є у вас така проблема?</li>
+            <li><b>1.2. ГОЛОВНИЙ ФАКТОР:</b> Головний фактор, який впливає на зір — це звісно цукор. Підкажіть будь ласка, цукор в нормі? Не страждаєте цукровим діабетом 2-го типу?</li>
+            <li><b>2.</b> Клієнти до нас звертаються по причинам катаракти, глаукоми, короткозорість чи далекозорість? Яка проблема у вас?</li>
+          </ul>
+
+          <p class="script-text" style="margin-top:16px"><b>💡 ЯКЩО КЛІЄНТ КАЖЕ «КАТАРАКТА / ГЛАУКОМА»:</b></p>
+          <ul class="q-list">
+            <li><b>3.2.</b> Останнім часом звертали увагу на те що зір розпочав знижуватись?</li>
+            <li><b>3.3.</b> Скажіть чи є у вас такі проблеми як плівка в очках, сухість чи почервоніння?</li>
+            <li><b>3.4.</b> Спостерігаєте такий симптом як "мушки в очах" або бліки?</li>
+            <li><b>3.5.</b> Чи є у вас відчуття стороннього тіла (як пісок в очах)?</li>
+            <li><b>3.6.</b> Чи бувають постійні болі та різі в оці? <i>(Якщо ні: Чудово, що ще ні, бо деякі наші пацієнти звертаються коли навіть за рахунок постійних больових відчуттів не можуть заснути і в них порушений режим сну)</i></li>
+          </ul>
+
+          <p class="script-text" style="margin-top:16px"><b>💡 ЯКЩО КЛІЄНТ КАЖЕ «КОРОТКОЗОРІСТЬ / ДАЛЕКОЗОРІСТЬ» (ЗНИЖЕННЯ ЗОРУ):</b></p>
+          <ul class="q-list">
+            <li><b>4.1.</b> Скажіть чи є у вас такі проблеми як плівка в очках, сухість чи почервоніння?</li>
+            <li><b>4.1.1.</b> Відчуття як свербіж очей і сльозотечу не відчуваєте? <i>(Якщо так: у вас підвищений внутрішньоочний тиск, тому що кришталик постійно у навантаженні)</i></li>
+            <li><b>4.2.</b> Окуляри ви використовуєте? Які саме, скільки діоптрій (+2.5 чи -1)? Як давно змінювали лінзи в окулярах?</li>
+            <li><b>4.3.</b> Коли темна пора дня — чи відчуваєте дискомфорт що очі дуже довго звикають — більше 30 хв?</li>
+            <li><b>4.4.</b> Головні болі, особливо ввечері, відчуваєте?</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <div class="step-label">Гарантії</div>
+          <p class="script-text">Дякую вам за відповіді, враховуючи ваші симптоми <i>(озвучуємо симптоми і вік)</i>, ось як буде проходити Ваш курс відновлення:</p>
+          <p class="script-text"><b>По-перше:</b> Дозування буде вкладене в упаковці. Воно буде розписано чітко по тижням як і скільки потрібно приймати засіб, кожного тижня воно буде змінюватись, щоб організм реагував на зміни — тому ви чітко слідуєте інструкції.</p>
+          <div class="callout callout-amber"><b>По-друге:</b> ПЕРШІ 14 ДНІВ СТАБІЛІЗУЄТЬСЯ ВНУТРІШНЬО ОЧНИЙ ТИСК І ГОЛОВНЕ ВІДНОВИТЬСЯ КРОВООБІГ очного яблука. Навіть найменші капіляри стабілізуються — це відновить гостроту ЗОРУ.</div>
+          <div class="callout callout-green"><b>ПІСЛЯ 14 ДНЯ</b> розпочнеться найголовніше: відновиться структура сітківки і відповідно за рахунок відновлення кровообігу, нервових закінчень і структури рогівки зникнуть і ті симптоми <i>(озвучуємо симптоми)</i>, з якими ви до нас звернулись. І так як ми працюємо по ліцензії, у нас також є відповідальність: ми будемо контролювати ваше відновлення очей і зв’язуватися з вами ДВІЧІ ЗА ВЕСЬ КУРС ВІДНОВЛЕННЯ — Добре?</div>
+          <p class="script-text"><b>І По-третє:</b> Саме головне ми спостерігаємо що деякі наші клієнти халатно відносяться до лікування. Перші 2-3 тижні вони чітко слідують інструкції, на 23-25 день зір у них повністю відновлюється і вони починають використовувати засіб частково. Я скажу вам просто: навіть після оперативних втручань чи по заміні кришталика, чи при лазерній корекції зору обов'язково потрібно пройти повний курс для стабілізації зорового нерву та судин у вашому віці і при ваших симптомах. Конкретно 80% пацієнтів не повертаються до проблеми взагалі, у 20% зір стабільний і не знижується в середньому впродовж 9.5-10 років.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-body">
+          <div class="step-label">Цінова пропозиція</div>
+          <p class="script-text"><span class="hl">[Ім’я клієнта]</span>, з урахуванням ваших симптомів, є два варіанти відновлення — Максимальний або Оптимальний курс. Розкажу коротко — а потім порекомендую той, що вам підійде найкраще.</p>
+          <div class="price-grid">
+            <div class="price-card rec">
+              <div class="rec-pill">Рекомендую</div>
+              <div class="price-name">Оптимальний курс · 4 упаковки · 35 днів</div>
+              <div class="price-amount">1 799 грн</div>
+              <div class="price-desc">2 упаковки за акцією + 2 по 199 грн пільгова програма від виробника. Швидке відновлення гостроти зору та кровообігу в оці. Без хроніки цього цілком достатньо.</div>
+            </div>
+            <div class="price-card">
+              <div class="price-name">Максимальний курс · 5 упаковок · 45 днів</div>
+              <div class="price-amount">3 299 грн</div>
+              <div class="price-desc">3 упаковки — по собівартості, ще 2 — по 199 грн пільгова програма від виробника. Дає потужний, стабільний результат без ризику повернення симптомів.</div>
+            </div>
+          </div>
+          <p class="script-text">Також ви залишаєтесь у нашій базі — зможете потім замовляти будь-який засіб зі знижкою. Але я вам рекомендую стартувати з Оптимального — це розумно, ефективно і без переплат.</p>
+          <div class="callout callout-purple">Як вам зручно — починаємо з Оптимального чи хочете зафіксувати Максимальний курс?</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">5</div>
+        <div class="step-body">
+          <div class="step-label">Відпрацювання заперечень</div>
+          <div class="callout callout-purple">
+            <b>Перше опрацювання:</b><br>
+            «<span class="hl">[Ім'я клієнта]</span>, я вас повністю розумію. Вже на 14 день у вас зникне дискомфорт в очах (болі, різі, свербіж, сльозотечіння), а після 21 ваш зір почне покращуватися, за рахунок насичення нерву корисними мікроелементами, внутрішньоочний тиск стабілізується і кришталик очиститься. Таким чином відбудеться не тільки відновлення гостроти зору, але і гарна профілактика глаукоми та катаракти. Це не тільки ефективний природний засіб але і приємна ціна — такий курс в середньому коштує 5799 грн — у вас же сьогодні є можливість отримати його лише за <b>1799 грн</b>. <span class="hl">[Ім'я клієнта]</span>, Ви готові нарешті забути про проблеми з очима?»
+          </div>
+          <div class="callout callout-green">
+            <b>Друге опрацювання (Пробний курс):</b><br>
+            «<span class="hl">[Ім'я клієнта]</span>, я вас розумію — деякі клієнти звертаються до нас вперше, тому я пропоную вам «Пробний курс», розрахований РІВНО НА 21 ДЕНЬ. Саме в період 18-21 дня, як я озвучував(ла) раніше — судини в оці повністю розширяться і стабілізуються, кришталик очиститься (ви це побачите в дзеркалі) і головне — відновиться зір у вашому віці на 25-30%. Спробуєте, побачите результат, за тиждень до закінчення цього курсу замовите оптимальний курс щоб закріпити результат — ДЛЯ НАС І ДЛЯ ВАС ЦЕ НАЙГОЛОВНІШЕ. До складу входять 2 упаковки засобу. Вартість пробного курсу становить лише <b>1200 гривень</b>. <span class="hl">[Ім'я клієнта]</span>, Ви готові отримати результат?»
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">6</div>
+        <div class="step-body">
+          <div class="step-label">Додаткові продажі</div>
+          <p class="script-text">«Зараз кожна друга людина також скаржиться на зниження імунітету та проблеми з нервовою системою, а це також пришвидшує погіршення зору, тому, нашим діючим клієнтам Я завжди рекомендую пропивати вітаміни. Зараз у нас в наявності є німецький комплекс <b>"ВІТАЛКОР"</b>. Вони містять у собі кальцій, магній, Д3, цинк, вітамін С та інші корисні елементи. "ВІТАЛКОР" підсилює роботу Зорки, а також стабілізує роботу нервової системи, нормалізує сон, підвищує тонус організма та укріплює імунітет. Знижка діючого клієнта складає 75%, тобто одна упаковка вітамінів для вас буде коштувати усього <b>250 гривень</b>, Бажаєте додати 2-3 упаковки?»</p>
+          <div class="callout callout-blue">Якщо не погоджується: «Давайте візьмемо хоча б одну, шкода відмовлятися від такої знижки, тим паче, що він дуже корисний.»</div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">7</div>
+        <div class="step-body">
+          <div class="step-label">Оформлення замовлення</div>
+          <p class="script-text">Підкажіть будь ласка ваше прізвище та ім’я по-батькові і населений пункт куди відправляємо ваш засіб?</p>
+          <p class="script-text">Ви замовили ___ (озвучуємо корзину/кількість). Сума вашого замовлення складе _____, + Послуги нової пошти.</p>
+          <div class="callout callout-purple">
+            <span class="hl">[Ім'я клієнта]</span>, так як ви замовляєте наш засіб по пільговій програмі, ми укладаємо з Вами договір під запис телефонної розмови. З нашої сторони, компанія зобов'язується проконтролювати дотримання правил пересилки та зберігання Вашого замовлення, а також несемо відповідальність за якість даного засобу. Ви зі своєї сторони зобов'язуєтеся вчасно забрати замовлення, коли воно прийде на пошту та чітко дотримуватися дозування, яке буде прописано! <b><span class="hl">[Ім'я клієнта]</span>, чи підтверджуєте ви оформлення замовлення? (ОТРИМАТИ ЧІТКУ ВІДПОВІДЬ ВІД КЛІЄНТА!!!)</b>
+          </div>
+          <p class="script-text"><span class="hl">[Ім'я клієнта]</span>, Ваше замовлення формується і відправляється протягом доби. Ми обов'язково повідомимо Вам коли посилка буде на пошті. Чи залишилися у Вас якісь питання? Добре, тоді бажаю Вам гарного відновлення та міцного здоров'я! На все добре!</p>
+        </div>
+      </div>
+    </div>
+
     <div id="info" class="panel">
       <div class="page-header">
         <div class="page-eyebrow">Довідник</div>
@@ -858,713 +980,5 @@
         <button class="ptab" onclick="swP('p3',2)">💊 Стоп Діабет</button>
         <button class="ptab" onclick="swP('p4',3)">💪 Гармата</button>
         <button class="ptab" onclick="swP('p5',4)">🧴 ВіталКор</button>
+        <button class="ptab" onclick="swP('p6',5)">👁️ ЗІР + Сила Карпат</button>
       </div>
-
-      <!-- 01 БДЖОЛИНИЙ ПІДМОР -->
-      <div id="p1" class="ppanel active"><div class="product-card">
-        <div class="prod-num">01</div>
-        <div class="product-title">🐝 Бджолиний підмор з прополісом</div>
-        <div style="height:12px"></div>
-        <table class="prod-params">
-          <tr><td>Маса</td><td>50 мл</td></tr>
-          <tr><td>Дозування</td><td>від 4 мл на день, 1 раз зранку</td></tr>
-        </table>
-
-        <div class="ing-group-label">🍯 Бджолині дари</div>
-        <div class="ing-list">
-          <div class="ing"><div class="ing-dot" style="background:#BA7517"></div><span><b>Бджолиний яд</b> — б'є по простаті, розганяє кров, запускає силу</span></div>
-          <div class="ing"><div class="ing-dot" style="background:#BA7517"></div><span><b>Прополіс</b> — знищує бактерії, прибирає запалення, очищує систему</span></div>
-          <div class="ing"><div class="ing-dot" style="background:#BA7517"></div><span><b>Маточне молочко</b> — підвищує тестостерон, повертає лібідо і драйв</span></div>
-          <div class="ing"><div class="ing-dot" style="background:#BA7517"></div><span><b>Перга</b> — білок, мінерали, живить зсередини</span></div>
-          <div class="ing"><div class="ing-dot" style="background:#BA7517"></div><span><b>Підмор</b> — очищує від застою, прибирає набряк і біль</span></div>
-          <div class="ing"><div class="ing-dot" style="background:#BA7517"></div><span><b>Воскова міль</b> — підтримує судини, ерекцію та витривалість</span></div>
-        </div>
-
-        <div class="ing-group-label">💊 Вітамінний комплекс</div>
-        <div class="ing-list">
-          <div class="ing"><div class="ing-dot" style="background:#EF9F27;width:18px;height:18px;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:#fff;flex-shrink:0">E</div><span><b>Вітамін E</b> — захищає клітини, дає стабільну ерекцію</span></div>
-          <div class="ing"><div class="ing-dot" style="background:#EF9F27;width:18px;height:18px;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:#fff;flex-shrink:0">D</div><span><b>Вітамін D</b> — підвищує тестостерон, силу і витривалість</span></div>
-          <div class="ing"><div class="ing-dot" style="background:#EF9F27;width:18px;height:18px;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:#fff;flex-shrink:0">C</div><span><b>Вітамін C</b> — покращує кровообіг, знімає запалення</span></div>
-          <div class="ing"><div class="ing-dot" style="background:#EF9F27;width:18px;height:18px;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:#fff;flex-shrink:0">A</div><span><b>Вітамін A</b> — відновлює простату і тканини</span></div>
-          <div class="ing"><div class="ing-dot" style="background:#EF9F27;width:18px;height:18px;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:700;color:#fff;flex-shrink:0">B7</div><span><b>Біотин (B7)</b> — дає енергію і підсилює лібідо</span></div>
-        </div>
-      </div>
-      </div>
-
-      <!-- 02 ГУЦУЛЬСЬКИЙ ЧАЙ -->
-      <div id="p2" class="ppanel"><div class="product-card">
-        <div class="prod-num">02</div>
-        <div class="product-title">🌿 Гуцульський чай (простата / потенція)</div>
-        <div style="height:12px"></div>
-        <table class="prod-params">
-          <tr><td>Маса</td><td>120 г</td></tr>
-          <tr><td>Дозування</td><td>від 14 г на день</td></tr>
-          <tr><td>Напрямок</td><td>Чоловіче здоров'я, потенція, простата</td></tr>
-        </table>
-
-        <div class="ing-list">
-          <div class="ing"><div class="ing-dot" style="background:#3B6D11"></div><span><b>Трава деревію</b> — знімає запалення простати, покращує кровообіг у малому тазу</span></div>
-          <div class="ing"><div class="ing-dot" style="background:#3B6D11"></div><span><b>Листя ліщини</b> — зміцнює судини, зменшує набряк простати</span></div>
-          <div class="ing"><div class="ing-dot" style="background:#3B6D11"></div><span><b>Трава звіробою</b> — антибактеріальна дія, підтримує нервову систему і лібідо</span></div>
-          <div class="ing"><div class="ing-dot" style="background:#3B6D11"></div><span><b>Листя кропиви</b> — підвищує рівень тестостерону, підтримує роботу нирок</span></div>
-          <div class="ing"><div class="ing-dot" style="background:#3B6D11"></div><span><b>Плоди шипшини</b> — потужний антиоксидант, зміцнює судини і імунітет</span></div>
-          <div class="ing"><div class="ing-dot" style="background:#3B6D11"></div><span><b>Квітки ромашки</b> — знімає спазми, зменшує запалення в сечовивідних шляхах</span></div>
-          <div class="ing"><div class="ing-dot" style="background:#3B6D11"></div><span><b>Трава пустирника</b> — заспокоює нервову систему, знижує тиск, підтримує серце</span></div>
-          <div class="ing"><div class="ing-dot" style="background:#3B6D11"></div><span><b>Хвощ польовий</b> — протизапальна дія, виводить токсини з простати та нирок</span></div>
-          <div class="ing"><div class="ing-dot" style="background:#3B6D11"></div><span><b>Квітки календули</b> — антисептик, прибирає запалення і набряк тканин</span></div>
-          <div class="ing"><div class="ing-dot" style="background:#3B6D11"></div><span><b>Трава материнки</b> — покращує кровообіг, тонізує, підтримує чоловічу силу</span></div>
-        </div>
-      </div>
-      </div>
-
-      <!-- 03 СТОП ДІАБЕТ -->
-      <div id="p3" class="ppanel"><div class="product-card">
-        <div class="prod-num">03</div>
-        <div class="product-title">💊 Гуцульський збір «Стоп Діабет»</div>
-        <div style="height:12px"></div>
-        <table class="prod-params">
-          <tr><td>Маса</td><td>100 г</td></tr>
-          <tr><td>Дозування</td><td>14 г на день</td></tr>
-          <tr><td>Напрямок</td><td>Зниження та стабілізація цукру в крові</td></tr>
-        </table>
-
-        <div class="ing-group-label">🌱 Природні компоненти</div>
-        <div class="ing-list">
-          <div class="ing"><div class="ing-dot" style="background:#1D9E75"></div><span><b>Екстракт гриба чага</b> — знижує рівень цукру в крові, очищує судини від холестерину, потужний антиоксидант</span></div>
-          <div class="ing"><div class="ing-dot" style="background:#1D9E75"></div><span><b>Екстракт листя чорниці</b> — природний інсуліноміметик, знижує глюкозу, покращує мікроциркуляцію в судинах</span></div>
-          <div class="ing"><div class="ing-dot" style="background:#1D9E75"></div><span><b>Корінь кульбаби</b> — підтримує підшлункову залозу, стимулює вироблення інсуліну, очищує печінку</span></div>
-          <div class="ing"><div class="ing-dot" style="background:#1D9E75"></div><span><b>Корінь імбиру</b> — підвищує чутливість клітин до інсуліну, прискорює обмін речовин, протизапальна дія</span></div>
-          <div class="ing"><div class="ing-dot" style="background:#1D9E75"></div><span><b>Екстракт стручків квасолі</b> — природний замінник інсуліну, знижує цукор, підтримує нирки</span></div>
-          <div class="ing"><div class="ing-dot" style="background:#1D9E75"></div><span><b>Листя стевії</b> — натуральний цукрозамінник без калорій, стабілізує рівень глюкози</span></div>
-        </div>
-
-        <div class="ing-group-label">💊 Вітамінний комплекс</div>
-        <div class="ing-list">
-          <div class="ing"><div class="ing-dot" style="background:#EF9F27;width:18px;height:18px;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:#fff;flex-shrink:0">C</div><span><b>Вітамін C</b> — зміцнює імунітет, знижує окислювальний стрес при діабеті</span></div>
-          <div class="ing"><div class="ing-dot" style="background:#EF9F27;width:18px;height:18px;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:#fff;flex-shrink:0">E</div><span><b>Вітамін E</b> — захищає клітини від руйнування, підтримує роботу серця та судин</span></div>
-          <div class="ing"><div class="ing-dot" style="background:#EF9F27;width:18px;height:18px;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:700;color:#fff;flex-shrink:0">B1</div><span><b>Вітамін B1</b> — покращує роботу нервової системи, зменшує оніміння та біль у ногах</span></div>
-          <div class="ing"><div class="ing-dot" style="background:#EF9F27;width:18px;height:18px;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:8px;font-weight:700;color:#fff;flex-shrink:0">B6</div><span><b>Вітамін B6</b> — нормалізує обмін білків і жирів, підтримує роботу мозку</span></div>
-          <div class="ing"><div class="ing-dot" style="background:#EF9F27;width:18px;height:18px;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:7px;font-weight:700;color:#fff;flex-shrink:0">B12</div><span><b>Вітамін B12</b> — допомагає утворенню крові, запобігає анемії</span></div>
-        </div>
-      </div>
-      </div>
-
-      <!-- 04 ГАРМАТА -->
-      <div id="p4" class="ppanel"><div class="product-card">
-        <div class="prod-num">04</div>
-        <div class="product-title">💪 Гармата — гель для чоловічої чутливості та витривалості</div>
-        <div style="height:12px"></div>
-        <table class="prod-params">
-          <tr><td>Формат</td><td>Гель для зовнішнього застосування</td></tr>
-          <tr><td>Ціна клієнтам</td><td><span class="price-pill">349 грн (знижка 75%)</span></td></tr>
-        </table>
-
-        <div class="ing-group-label">📋 Формат застосування</div>
-        <div class="ing-list">
-          <div class="ing"><div class="ing-dot"></div><span>Нанесення перед статевим актом</span></div>
-          <div class="ing"><div class="ing-dot"></div><span>Швидке вбирання, без липкості</span></div>
-          <div class="ing"><div class="ing-dot"></div><span>Нейтральний або легкий м'ятно-трав'яний аромат</span></div>
-          <div class="ing"><div class="ing-dot"></div><span>Безпечний для презервативів (водна основа)</span></div>
-          <div class="ing"><div class="ing-dot"></div><span>Протестовано дерматологічно</span></div>
-        </div>
-
-        <div class="ing-group-label">⚡ Що робить</div>
-        <div class="ing-list">
-          <div class="ing"><div class="ing-dot" style="background:#534AB7"></div><span>Підвищує чутливість</span></div>
-          <div class="ing"><div class="ing-dot" style="background:#534AB7"></div><span>Покращує локальний кровообіг</span></div>
-          <div class="ing"><div class="ing-dot" style="background:#534AB7"></div><span>Допомагає краще контролювати збудження</span></div>
-          <div class="ing"><div class="ing-dot" style="background:#534AB7"></div><span>Дає відчуття тепла / легкого поколювання</span></div>
-          <div class="ing"><div class="ing-dot" style="background:#534AB7"></div><span>Подовжує контакт за рахунок контролю</span></div>
-        </div>
-
-        <div class="ing-group-label">🧪 Основа складу</div>
-        <div class="ing-list">
-          <div class="ing"><div class="ing-dot" style="background:#185FA5"></div><span><b>L-аргінін</b> — покращує мікроциркуляцію</span></div>
-          <div class="ing"><div class="ing-dot" style="background:#185FA5"></div><span><b>Ніацинамід (B3)</b> — судинний ефект, тепло</span></div>
-          <div class="ing"><div class="ing-dot" style="background:#185FA5"></div><span><b>Ментол (мікродоза)</b> — контроль чутливості</span></div>
-          <div class="ing"><div class="ing-dot" style="background:#185FA5"></div><span><b>Пантенол / алое</b> — захист і комфорт</span></div>
-          <div class="ing"><div class="ing-dot" style="background:#185FA5"></div><span><b>Тонгкат алі</b> — тонус</span></div>
-          <div class="ing"><div class="ing-dot" style="background:#185FA5"></div><span><b>Женьшень</b> — енергія, адаптоген</span></div>
-          <div class="ing"><div class="ing-dot" style="background:#185FA5"></div><span><b>Муіра пуама</b> — традиційний афродизіак</span></div>
-        </div>
-      </div>
-      </div>
-
-      <!-- 05 ВІТАЛКОР -->
-      <div id="p5" class="ppanel"><div class="product-card">
-        <div class="prod-num">05</div>
-        <div class="product-title">🧴 ВіталКор — базовий щоденний комплекс</div>
-        <div style="height:12px"></div>
-        <table class="prod-params">
-          <tr><td>Форма</td><td>30 капсул (15 вітамінів + 15 Омега-3)</td></tr>
-          <tr><td>Прийом</td><td>1 раз на день вранці після їжі, не розжовувати</td></tr>
-          <tr><td>Ціна клієнтам</td><td><span class="price-pill">399 грн (знижка 75%)</span></td></tr>
-        </table>
-
-        <div class="callout callout-blue" style="margin-bottom:14px">Омега-3 приймається разом із вітамінною капсулою для кращого засвоєння жиророзчинних вітамінів (A, E).</div>
-
-        <div class="ing-group-label">🎯 Напрямки дії</div>
-        <div class="ing-list">
-          <div class="ing"><div class="ing-dot" style="background:#D4537E"></div><span><b>Нервова система та енергія</b> — магній + вітаміни A, E. Зменшення втоми, напруги, підтримка стресостійкості</span></div>
-          <div class="ing"><div class="ing-dot" style="background:#D4537E"></div><span><b>Серце та судини</b> — омега-3 + магній. Еластичність судин і нормальний кровообіг</span></div>
-          <div class="ing"><div class="ing-dot" style="background:#D4537E"></div><span><b>Антиоксидантний захист</b> — вітаміни C, E + селен. Захист клітин від окисного стресу</span></div>
-          <div class="ing"><div class="ing-dot" style="background:#D4537E"></div><span><b>Кістки та м'язи</b> — кальцій + магній. Підтримка опорно-рухової системи</span></div>
-          <div class="ing"><div class="ing-dot" style="background:#D4537E"></div><span><b>Загальний тонус і відновлення</b> — підтримка при фізичних і розумових навантаженнях</span></div>
-        </div>
-      </div>
-      </div>
-
-    </div>
-
-    <!-- ===== ЗАПЕРЕЧЕННЯ ===== -->
-    <div id="zap" class="panel">
-      <div class="page-header">
-        <div class="page-eyebrow">Техніка продажу</div>
-        <div class="page-title">Відпрацювання заперечень</div>
-      </div>
-
-      <style>
-        .zap-group{margin-bottom:28px}
-        .zap-group-title{font-size:11px;text-transform:uppercase;letter-spacing:.8px;font-weight:600;color:#534AB7;margin-bottom:10px;padding-bottom:8px;border-bottom:2px solid #EEEDFE}
-        .zap-card{border:1px solid rgba(0,0,0,0.1);border-radius:10px;background:#fff;margin-bottom:8px;overflow:hidden}
-        .zap-head{display:flex;align-items:center;gap:12px;padding:13px 16px;cursor:pointer;user-select:none}
-        .zap-head:hover{background:#F7F6F3}
-        .zap-trigger{font-size:14.5px;font-weight:500;color:#1A1917;flex:1}
-        .zap-tag{font-size:11px;font-weight:500;padding:2px 9px;border-radius:20px;flex-shrink:0}
-        .tag-top{background:#E6F1FB;color:#042C53}
-        .tag-vp{background:#EAF3DE;color:#173404}
-        .tag-gar{background:#FAEEDA;color:#412402}
-        .tag-price{background:#FCEBEB;color:#501313}
-        .zap-arrow{font-size:13px;color:#5F5E5A;transition:transform .2s;flex-shrink:0}
-        .zap-arrow.open{transform:rotate(180deg)}
-        .zap-body{display:none;padding:0 16px 16px;border-top:1px solid #EEECE8}
-        .zap-body.open{display:block}
-        .zap-meta{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:12px 0}
-        .zap-meta-cell{background:#F7F6F3;border-radius:8px;padding:10px 12px}
-        .zap-meta-label{font-size:10px;text-transform:uppercase;letter-spacing:.6px;font-weight:600;color:#5F5E5A;margin-bottom:4px}
-        .zap-meta-val{font-size:13px;color:#1A1917;line-height:1.5}
-        .zap-meta-val.danger{color:#A32D2D}
-      </style>
-
-      <div class="zap-group">
-        <div class="zap-group-title">На початку розмови</div>
-
-        <div class="zap-card">
-          <div class="zap-head" onclick="toggleZap(this)">
-            <div class="zap-trigger">Скільки коштує?</div>
-            <span class="zap-tag tag-top">Початок</span>
-            <span class="zap-arrow">▼</span>
-          </div>
-          <div class="zap-body">
-            <div class="zap-meta">
-              <div class="zap-meta-cell"><div class="zap-meta-label">Причина</div><div class="zap-meta-val">Хоче порівняти ціну, не розуміючи цінності продукту</div></div>
-              <div class="zap-meta-cell"><div class="zap-meta-label">Не робимо!</div><div class="zap-meta-val danger">Називати ціну відразу до цінової пропозиції</div></div>
-            </div>
-            <div class="callout callout-purple">Так як ви бачили на сайті, акційна ціна 199 грн за вами зафіксована. Засіб дуже концентрований, тому ми розпишемо для вас дозування згідно з вашими відповідями. Для цього підкажіть, будь ласка, ваш вік та вагу?</div>
-          </div>
-        </div>
-
-        <div class="zap-card">
-          <div class="zap-head" onclick="toggleZap(this)">
-            <div class="zap-trigger">Мені треба тільки одна упаковка</div>
-            <span class="zap-tag tag-top">Початок</span>
-            <span class="zap-arrow">▼</span>
-          </div>
-          <div class="zap-body">
-            <div class="zap-meta">
-              <div class="zap-meta-cell"><div class="zap-meta-label">Причина</div><div class="zap-meta-val">Бажання спробувати або сумнів</div></div>
-              <div class="zap-meta-cell"><div class="zap-meta-label">Не робимо!</div><div class="zap-meta-val danger">Виправдовуватися, пояснюючи що треба замовляти курс</div></div>
-            </div>
-            <div class="callout callout-purple">Так, звісно. Ви отримаєте одну, дві упаковки — або стільки, скільки вам буде потрібно і комфортно. Але засіб дійсно концентрований і сильний, тому я коротко поясню, як він правильно працює і як його правильно приймати, щоб отримати хороший результат і не нашкодити собі. Домовилися?</div>
-          </div>
-        </div>
-
-        <div class="zap-card">
-          <div class="zap-head" onclick="toggleZap(this)">
-            <div class="zap-trigger">Я не хочу відповідати на ваші питання</div>
-            <span class="zap-tag tag-top">Початок</span>
-            <span class="zap-arrow">▼</span>
-          </div>
-          <div class="zap-body">
-            <div class="zap-meta">
-              <div class="zap-meta-cell"><div class="zap-meta-label">Причина</div><div class="zap-meta-val">Клієнт поспішає або закритий до діалогу</div></div>
-              <div class="zap-meta-cell"><div class="zap-meta-label">Не робимо!</div><div class="zap-meta-val danger">Механічне опитування за скриптом</div></div>
-            </div>
-            <div class="callout callout-purple">Я розумію ваше бажання швидше перейти до справи. Але оскільки ми не просто відправляємо товар, а підбираємо індивідуальне дозування під ваш організм, мені важливо знати ці параметри. Ми не просто кладемо загальну інструкцію «для всіх» — ми індивідуально прописуємо вам дозування та прийом по тижнях, поетапно, залежно від вашої ситуації. Коли прийдете на пошту — там буде чітко розписано, як і що приймати. Підкажіть, будь ласка, скільки вам років та яка у вас вага?</div>
-          </div>
-        </div>
-
-        <div class="zap-card">
-          <div class="zap-head" onclick="toggleZap(this)">
-            <div class="zap-trigger">А воно точно дієве?</div>
-            <span class="zap-tag tag-top">Початок</span>
-            <span class="zap-arrow">▼</span>
-          </div>
-          <div class="zap-body">
-            <div class="zap-meta">
-              <div class="zap-meta-cell"><div class="zap-meta-label">Причина</div><div class="zap-meta-val">Потреба в соціальному доказі та впевненості</div></div>
-              <div class="zap-meta-cell"><div class="zap-meta-label">Не робимо!</div><div class="zap-meta-val danger">Відповідь «Так, звісно» без аргументів</div></div>
-            </div>
-            <div class="callout callout-purple">Звісно! Але для того, щоб засіб був максимально дієвим у вашому випадку, я і проводжу опитування. Склад працює накопичувально, і його ефективність прямо залежить від того, наскільки точно ми врахуємо стан вашого організму та підберемо дозування. Без знання ваших параметрів це буде купівля навмання, а ми працюємо виключно на результат. Тому підкажіть: скільки вам повних років та яка зараз вага?</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="zap-group">
-        <div class="zap-group-title">На виявленні потреб</div>
-
-        <div class="zap-card">
-          <div class="zap-head" onclick="toggleZap(this)">
-            <div class="zap-trigger">В мене все нормально, хочу профілактику</div>
-            <span class="zap-tag tag-vp">ВП</span>
-            <span class="zap-arrow">▼</span>
-          </div>
-          <div class="zap-body">
-            <div class="zap-meta">
-              <div class="zap-meta-cell"><div class="zap-meta-label">Причина</div><div class="zap-meta-val">Клієнт не відчуває гострого болю або проблеми зараз</div></div>
-              <div class="zap-meta-cell"><div class="zap-meta-label">Не робимо!</div><div class="zap-meta-val danger">Згущувати фарби або втрачати інтерес</div></div>
-            </div>
-            <div class="callout callout-purple">Це чудово! У нас близько 30% клієнтів звертаються саме без яскраво виражених симптомів — і це правильний підхід. Дуже добре, що ви не чекаєте моменту, коли проблема вже почне сильно турбувати. Профілактика завжди працює легше, швидше і комфортніше для організму. Тому зараз можна спокійно пройти підтримуючий курс і надовго забути навіть про мінімальний дискомфорт. Але підкажіть, будь ласка, чи інколи ви все ж відчуваєте такі симптоми:</div>
-          </div>
-        </div>
-
-        <div class="zap-card">
-          <div class="zap-head" onclick="toggleZap(this)">
-            <div class="zap-trigger">Навіщо всі ці питання, просто вишліть</div>
-            <span class="zap-tag tag-vp">ВП</span>
-            <span class="zap-arrow">▼</span>
-          </div>
-          <div class="zap-body">
-            <div class="zap-meta">
-              <div class="zap-meta-cell"><div class="zap-meta-label">Причина</div><div class="zap-meta-val">Клієнту дискомфортно</div></div>
-              <div class="zap-meta-cell"><div class="zap-meta-label">Не робимо!</div><div class="zap-meta-val danger">Одразу до ціни або гарантій, не завершивши ВП</div></div>
-            </div>
-            <div class="callout callout-purple">[Ім'я], ми не займаємося безконтрольною розсилкою, оскільки несемо відповідальність за якість відновлення. Наш засіб містить активні компоненти, дозування яких має чітко відповідати вашим фізіологічним параметрам. Якщо надіслати без індивідуального розрахунку — він може просто не спрацювати, а ми працюємо виключно на результат. Переходимо далі.</div>
-          </div>
-        </div>
-
-        <div class="zap-card">
-          <div class="zap-head" onclick="toggleZap(this)">
-            <div class="zap-trigger">Давайте швидше</div>
-            <span class="zap-tag tag-vp">ВП</span>
-            <span class="zap-arrow">▼</span>
-          </div>
-          <div class="zap-body">
-            <div class="zap-meta">
-              <div class="zap-meta-cell"><div class="zap-meta-label">Причина</div><div class="zap-meta-val">Брак часу або монотонність в голосі менеджера</div></div>
-              <div class="zap-meta-cell"><div class="zap-meta-label">Не робимо!</div><div class="zap-meta-val danger">Уповільнення або зайва деталізація</div></div>
-            </div>
-            <div class="callout callout-purple">Я вас почув, постараюся максимально коротко. Але наша мета — не просто надіслати вам посилку, а гарантувати, що вона спрацює.</div>
-          </div>
-        </div>
-
-        <div class="zap-card">
-          <div class="zap-head" onclick="toggleZap(this)">
-            <div class="zap-trigger">Так, а скільки коштує? (під час ВП)</div>
-            <span class="zap-tag tag-vp">ВП</span>
-            <span class="zap-arrow">▼</span>
-          </div>
-          <div class="zap-body">
-            <div class="zap-meta">
-              <div class="zap-meta-cell"><div class="zap-meta-label">Причина</div><div class="zap-meta-val">Клієнтові нудно від монотонності менеджера</div></div>
-              <div class="zap-meta-cell"><div class="zap-meta-label">Не робимо!</div><div class="zap-meta-val danger">Монотонно звучати, не реагувати на емоції клієнта</div></div>
-            </div>
-            <div class="callout callout-purple">Розумію, що ціна — це перше, що цікавить. Акційна вартість складає 199 грн — і ви замовляєте саме по акції.</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="zap-group">
-        <div class="zap-group-title">На гарантіях</div>
-
-        <div class="zap-card">
-          <div class="zap-head" onclick="toggleZap(this)">
-            <div class="zap-trigger">Давайте швидше</div>
-            <span class="zap-tag tag-gar">Гарантії</span>
-            <span class="zap-arrow">▼</span>
-          </div>
-          <div class="zap-body">
-            <div class="zap-meta">
-              <div class="zap-meta-cell"><div class="zap-meta-label">Причина</div><div class="zap-meta-val">Брак часу або монотонність в голосі менеджера</div></div>
-              <div class="zap-meta-cell"><div class="zap-meta-label">Не робимо!</div><div class="zap-meta-val danger">Уповільнення, зайва деталізація, не згадувати ім'я клієнта</div></div>
-            </div>
-            <div class="callout callout-purple">Я вас почув, постараюся максимально коротко. Але наша мета — не просто надіслати вам посилку, а гарантувати, що вона спрацює.</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="zap-group">
-        <div class="zap-group-title">Після озвучення ціни</div>
-
-        <div class="zap-card">
-          <div class="zap-head" onclick="toggleZap(this)">
-            <div class="zap-trigger">Дорого</div>
-            <span class="zap-tag tag-price">Ціна</span>
-            <span class="zap-arrow">▼</span>
-          </div>
-          <div class="zap-body">
-            <div class="zap-meta">
-              <div class="zap-meta-cell"><div class="zap-meta-label">Причина</div><div class="zap-meta-val">Ціновий бар'єр у голові</div></div>
-              <div class="zap-meta-cell"><div class="zap-meta-label">Не робимо!</div><div class="zap-meta-val danger">Одразу пропонувати знижку</div></div>
-            </div>
-            <div class="callout callout-purple">Іване Івановичу, я вас розумію, сума 2 199 грн на перший погляд здається значною. Але давайте подивимося з іншого боку: цей курс розрахований на 35 днів, отже ваше здоров'я коштуватиме приблизно 60–70 гривень на день — це навіть дешевше, ніж чашка кави. При цьому ви отримуєте не просто пачки / траву / краплі, а комплексне рішення вашої проблеми [називаємо всі проблеми клієнта] з професійною формою засвоєння та дозуванням, якої немає в аптечних аналогах.</div>
-            <div class="callout callout-blue">Ось вам приклад: мій близький родич теж пів року вагався і все відкладав «на потім», а в результаті стан так погіршився, що довелося проходити капітальне відновлення, яке коштувало як 15 таких курсів. Що вам зараз вигідніше: один раз привести організм до ладу за розумні гроші чи чекати, поки витрати зростуть удесятеро? Оформлюємо замовлення?</div>
-          </div>
-        </div>
-
-        <div class="zap-card">
-          <div class="zap-head" onclick="toggleZap(this)">
-            <div class="zap-trigger">В рекламі написано інше / в рекламі 199</div>
-            <span class="zap-tag tag-price">Ціна</span>
-            <span class="zap-arrow">▼</span>
-          </div>
-          <div class="zap-body">
-            <div class="zap-meta">
-              <div class="zap-meta-cell"><div class="zap-meta-label">Причина</div><div class="zap-meta-val">Помилкове сприйняття — вважає, що за 199 грн вирішить проблему</div></div>
-              <div class="zap-meta-cell"><div class="zap-meta-label">Не робимо!</div><div class="zap-meta-val danger">Сперечатися з клієнтом</div></div>
-            </div>
-            <div class="callout callout-purple">Ви абсолютно праві, в рекламі вказана наша найкраща пропозиція — 199 грн. Саме завдяки такій ціні ми робимо курси доступними для кожного. Ця ціна діє на кожну ДРУГУ одиницю товару при замовленні повного комплексу, щоб ви отримали не просто упаковку, а реальний результат та позбулися [перелічуємо проблеми клієнта]. Згодні, що результат важливіший за разову покупку? Оформлюємо?</div>
-          </div>
-        </div>
-
-        <div class="zap-card">
-          <div class="zap-head" onclick="toggleZap(this)">
-            <div class="zap-trigger">Дайте одну, спробувати за 199</div>
-            <span class="zap-tag tag-price">Ціна</span>
-            <span class="zap-arrow">▼</span>
-          </div>
-          <div class="zap-body">
-            <div class="zap-meta">
-              <div class="zap-meta-cell"><div class="zap-meta-label">Причина</div><div class="zap-meta-val">Хоче мінімізувати витрати, не впевнений у продукті</div></div>
-              <div class="zap-meta-cell"><div class="zap-meta-label">Не робимо!</div><div class="zap-meta-val danger">Не давати гарантію якості та результату</div></div>
-            </div>
-            <div class="callout callout-purple">Я розумію ваше бажання спробувати, але моя мета — щоб ви отримали результат, а не просто витратили 199 грн. По-перше, ми підібрали дозування саме під ваші скарги — [перерахувати симптоми]. Щоб організм встиг відреагувати та почалося реальне відновлення, потрібен час. По-друге, ми працюємо з 2008 року, маємо всі сертифікати — ви зможете особисто все перевірити на пошті перед оплатою.</div>
-            <div class="callout callout-blue">Організм не вмикається миттєво. Весь секрет у системності: кожна наступна упаковка доповнює попередню. Одна упаковка просто не встигне спрацювати так, як вам потрібно. Давайте зробимо правильно — оформимо набір за акційною ціною, ви все перевірите при отриманні та почнете курс, який реально змінить ваш стан. Оформлюємо?</div>
-          </div>
-        </div>
-
-        <div class="zap-card">
-          <div class="zap-head" onclick="toggleZap(this)">
-            <div class="zap-trigger">Вишліть одну за 199</div>
-            <span class="zap-tag tag-price">Ціна</span>
-            <span class="zap-arrow">▼</span>
-          </div>
-          <div class="zap-body">
-            <div class="zap-meta">
-              <div class="zap-meta-cell"><div class="zap-meta-label">Причина</div><div class="zap-meta-val">Намагання отримати акційну ціну без умов</div></div>
-              <div class="zap-meta-cell"><div class="zap-meta-label">Не робимо!</div><div class="zap-meta-val danger">Сперечатися, доводити, робити знижку, відпускати без обробки</div></div>
-            </div>
-            <div class="callout callout-purple">Я б із задоволенням надіслав вам одну упаковку за 199 грн, але це буде не зовсім чесно по відношенню до вас. Організму потрібен час на накопичення активних компонентів, і одна упаковка просто не встигне дати той ефект, за яким ви прийшли та позбутися ваших проблем: [проговорюємо симптоми клієнта]. Акційна ціна створена саме для того, щоб ви отримали повноцінний курс відновлення за ціною звичайної профілактики. Оформлюємо?</div>
-          </div>
-        </div>
-
-        <div class="zap-card">
-          <div class="zap-head" onclick="toggleZap(this)">
-            <div class="zap-trigger">Я не готовий / я подумаю</div>
-            <span class="zap-tag tag-price">Ціна</span>
-            <span class="zap-arrow">▼</span>
-          </div>
-          <div class="zap-body">
-            <div class="zap-meta">
-              <div class="zap-meta-cell"><div class="zap-meta-label">Причина</div><div class="zap-meta-val">Приховане заперечення — дорого або відсутність довіри</div></div>
-              <div class="zap-meta-cell"><div class="zap-meta-label">Не робимо!</div><div class="zap-meta-val danger">Відпускати без уточнення причин</div></div>
-            </div>
-            <div class="callout callout-purple">Я вас розумію, рішення має бути зваженим. Підкажіть, що саме вас зараз найбільше бентежить: ціна чи склад?</div>
-          </div>
-        </div>
-
-        <div class="zap-card">
-          <div class="zap-head" onclick="toggleZap(this)">
-            <div class="zap-trigger">Я пораджусь з рідними</div>
-            <span class="zap-tag tag-price">Ціна</span>
-            <span class="zap-arrow">▼</span>
-          </div>
-          <div class="zap-body">
-            <div class="zap-meta">
-              <div class="zap-meta-cell"><div class="zap-meta-label">Причина</div><div class="zap-meta-val">Перекладання відповідальності</div></div>
-              <div class="zap-meta-cell"><div class="zap-meta-label">Не робимо!</div><div class="zap-meta-val danger">Погоджуватися «Добре, порадьтесь»</div></div>
-            </div>
-            <div class="callout callout-purple">Звісно, порадитися можна. Але важливо розуміти: рідні бачать лише суму, а ви — бачите своє самопочуття та щоденний дискомфорт від [проговорюємо симптоми клієнта]. Рідні не відчувають ваш біль так, як ви — тому ваше здоров'я це ваша особиста відповідальність. Підкажіть, вам зараз дорого чи ви просто сумніваєтесь що цей курс допоможе? Тож що саме вас зупиняє?</div>
-          </div>
-        </div>
-
-        <div class="zap-card">
-          <div class="zap-head" onclick="toggleZap(this)">
-            <div class="zap-trigger">Я пораджусь з лікарем / здам аналізи / зроблю УЗД</div>
-            <span class="zap-tag tag-price">Ціна</span>
-            <span class="zap-arrow">▼</span>
-          </div>
-          <div class="zap-body">
-            <div class="zap-meta">
-              <div class="zap-meta-cell"><div class="zap-meta-label">Причина</div><div class="zap-meta-val">Потреба у фаховому підтвердженні</div></div>
-              <div class="zap-meta-cell"><div class="zap-meta-label">Не робимо!</div><div class="zap-meta-val danger">Критикувати медицину замість пояснення</div></div>
-            </div>
-            <div class="callout callout-purple">Я згоден, що діагностика важлива. Але давайте чесно: зазвичай лікарі просто виписують стандартний набір з аптеки, який часто лише маскує симптоми, тоді як ми пропонуємо систему, що працює на причину. Поки ви здаєте аналізи — проблема не стоїть на місці. Якщо вас турбують [перелічуємо симптоми], то кожен день очікування — це крок назад. Ви готові ризикувати часом? Давайте розберемося: вам дорого чи сумніваєтесь що допоможе?</div>
-          </div>
-        </div>
-
-        <div class="zap-card">
-          <div class="zap-head" onclick="toggleZap(this)">
-            <div class="zap-trigger">«Пишете одне, кажете інше» — у вас так, як у всіх</div>
-            <span class="zap-tag tag-price">Ціна</span>
-            <span class="zap-arrow">▼</span>
-          </div>
-          <div class="zap-body">
-            <div class="zap-meta">
-              <div class="zap-meta-cell"><div class="zap-meta-label">Причина</div><div class="zap-meta-val">Розчарування в маркетингу</div></div>
-              <div class="zap-meta-cell"><div class="zap-meta-label">Не робимо!</div><div class="zap-meta-val danger">Виправдовуватися</div></div>
-            </div>
-            <div class="callout callout-purple">Розумію ваш скептицизм, але нас точно не варто порівнювати з іншими. Ми працюємо зовсім за іншим принципом.</div>
-            <div class="callout callout-green"><b>Прозорість:</b> Ви все перевіряєте особисто на пошті перед оплатою. У кожній посилці є сертифікати якості та наші контактні телефони — ми залишаємося з вами на зв'язку протягом усього курсу.<br><br><b>Точність:</b> Ми не просто продаємо банку — ми підбираємо дозування індивідуально під ваші симптоми, щоб ви отримали результат.<br><br><b>Чесність щодо ціни:</b> У нас немає «сюрпризів». Ви берете курс один раз і проходите до кінця.</div>
-            <div class="callout callout-purple">Тож давайте розберемося: ви боїтеся, що замовлення буде відрізнятися від того, що ми обговорили, чи вас просто бентежить підсумкова вартість курсу?</div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- ===== ДОСТУПИ (АДМІН) ===== -->
-    <div id="access" class="panel admin-only">
-      <div class="page-header">
-        <div class="page-eyebrow">Адмін-панель</div>
-        <div class="page-title">Управління доступами</div>
-      </div>
-
-      <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px 24px;margin-bottom:20px">
-        <div style="font-size:13px;font-weight:500;color:var(--text-muted);text-transform:uppercase;letter-spacing:.6px;margin-bottom:16px">Активні користувачі</div>
-        <table class="admin-table">
-          <thead><tr><th>Пошта</th><th>Роль</th><th>Дія</th></tr></thead>
-          <tbody id="users-tbody"></tbody>
-        </table>
-        <div class="add-row">
-          <div>
-            <div style="font-size:11px;font-weight:500;color:var(--text-muted);text-transform:uppercase;letter-spacing:.5px;margin-bottom:5px">Пошта</div>
-            <input type="email" id="new-email" placeholder="email@example.com">
-          </div>
-          <div>
-            <div style="font-size:11px;font-weight:500;color:var(--text-muted);text-transform:uppercase;letter-spacing:.5px;margin-bottom:5px">Пароль</div>
-            <input type="text" id="new-pass" placeholder="пароль">
-          </div>
-          <button class="add-btn" onclick="addUser()">Додати</button>
-        </div>
-        <div id="add-error" style="font-size:13px;color:#A32D2D;margin-top:8px;min-height:18px"></div>
-      </div>
-
-      <div class="admin-only" style="background:var(--gray-50,#F7F6F3);border-radius:10px;padding:14px 18px;font-size:13px;color:var(--text-muted);line-height:1.7;margin-top:12px">
-        Глядачі можуть переглядати всі скрипти та довідник. Вкладка «Доступи» доступна тільки адміну.
-      </div>
-    </div>
-
-  </main>
-</div>
-
-<script>
-// ─── КОНФІГ ───────────────────────────────────────────────
-const API = '/.netlify/functions/users';
-const SESSION_KEY = 'orbita_session';
-const CHECK_INTERVAL = 30000;
-
-// ─── СЕСІЯ ────────────────────────────────────────────────
-function getSession() {
-  try { return JSON.parse(localStorage.getItem(SESSION_KEY)); } catch { return null; }
-}
-function setSession(email, role, token) {
-  localStorage.setItem(SESSION_KEY, JSON.stringify({ email, role, token }));
-}
-function clearSession() {
-  localStorage.removeItem(SESSION_KEY);
-}
-
-// ─── КІКНУТИ ──────────────────────────────────────────────
-function kickOut(msg) {
-  clearSession();
-  document.getElementById('auth-screen').classList.remove('hidden');
-  document.querySelectorAll('.admin-only').forEach(el => el.classList.remove('visible'));
-  if (msg) document.getElementById('auth-error').textContent = msg;
-  document.getElementById('auth-pass').value = '';
-}
-
-// ─── ПЕРЕВІРКА ТОКЕНА (кожні 30 сек) ─────────────────────
-async function checkSession() {
-  const s = getSession();
-  if (!s) return;
-  try {
-    const r = await fetch(API, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ action: 'check', email: s.email, token: s.token })
-    });
-    const data = await r.json();
-    if (!data.valid) kickOut('Доступ закрито адміністратором');
-  } catch {}
-}
-
-// ─── ЛОГІН ────────────────────────────────────────────────
-async function doLogin() {
-  const email = document.getElementById('auth-email').value.trim().toLowerCase();
-  const pass  = document.getElementById('auth-pass').value;
-  const err   = document.getElementById('auth-error');
-  const btn   = document.querySelector('.auth-btn');
-  err.textContent = '';
-  btn.textContent = 'Перевірка...';
-  btn.disabled = true;
-
-  try {
-    const r = await fetch(API, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ action: 'login', email, pass })
-    });
-    const data = await r.json();
-    if (r.ok) {
-      setSession(email, data.role, data.token);
-      applySession(data.role);
-    } else {
-      err.textContent = data.error || 'Невірна пошта або пароль';
-    }
-  } catch {
-    err.textContent = 'Помилка з\'єднання. Спробуйте ще раз.';
-  }
-
-  btn.textContent = 'Увійти';
-  btn.disabled = false;
-}
-
-function doLogout() {
-  clearSession();
-  document.getElementById('auth-screen').classList.remove('hidden');
-  document.getElementById('auth-pass').value = '';
-  document.getElementById('auth-error').textContent = '';
-  document.querySelectorAll('.admin-only').forEach(el => el.classList.remove('visible'));
-}
-
-function applySession(role) {
-  document.getElementById('auth-screen').classList.add('hidden');
-  if (role === 'admin') {
-    document.querySelectorAll('.admin-only').forEach(el => el.classList.add('visible'));
-    loadUsers();
-  } else {
-    document.querySelectorAll('.admin-only').forEach(el => el.classList.remove('visible'));
-  }
-}
-
-// ─── УПРАВЛІННЯ ДОСТУПАМИ ─────────────────────────────────
-async function loadUsers() {
-  const s = getSession();
-  if (!s) return;
-  try {
-    const r = await fetch(`${API}?email=${encodeURIComponent(s.email)}&token=${s.token}`);
-    const data = await r.json();
-    renderUsers(data.users || []);
-  } catch {
-    renderUsers([]);
-  }
-}
-
-function renderUsers(users) {
-  const tbody = document.getElementById('users-tbody');
-  const rows = [
-    `<tr>
-      <td>admin@orbita.com</td>
-      <td><span style="background:#EEEDFE;color:#3C3489;padding:2px 8px;border-radius:20px;font-size:11px;font-weight:600">Адмін</span></td>
-      <td>—</td>
-    </tr>`
-  ];
-  users.forEach(u => {
-    rows.push(`<tr>
-      <td>${u.email}</td>
-      <td><span style="background:#EAF3DE;color:#27500A;padding:2px 8px;border-radius:20px;font-size:11px;font-weight:600">Глядач</span></td>
-      <td><button class="del-btn" onclick="deleteUser('${u.email}')">Закрити доступ</button></td>
-    </tr>`);
-  });
-  tbody.innerHTML = rows.join('');
-}
-
-async function addUser() {
-  const newEmail = document.getElementById('new-email').value.trim();
-  const newPass  = document.getElementById('new-pass').value.trim();
-  const err      = document.getElementById('add-error');
-  const btn      = document.querySelector('.add-btn');
-  err.textContent = '';
-
-  if (!newEmail || !newPass) { err.textContent = 'Заповніть пошту і пароль'; return; }
-
-  const s = getSession();
-  btn.textContent = '...';
-  btn.disabled = true;
-
-  try {
-    const r = await fetch(API, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ action: 'add', email: s.email, token: s.token, newEmail, newPass })
-    });
-    const data = await r.json();
-    if (r.ok) {
-      document.getElementById('new-email').value = '';
-      document.getElementById('new-pass').value = '';
-      renderUsers(data.users || []);
-    } else {
-      err.textContent = data.error || 'Помилка';
-    }
-  } catch {
-    err.textContent = 'Помилка з\'єднання';
-  }
-
-  btn.textContent = 'Додати';
-  btn.disabled = false;
-}
-
-async function deleteUser(targetEmail) {
-  const s = getSession();
-  try {
-    const r = await fetch(API, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ action: 'delete', email: s.email, token: s.token, targetEmail })
-    });
-    const data = await r.json();
-    if (r.ok) renderUsers(data.users || []);
-  } catch {}
-}
-
-// ─── НАВІГАЦІЯ ────────────────────────────────────────────
-function swP(id, idx) {
-  document.querySelectorAll('.ppanel').forEach(p => p.classList.remove('active'));
-  document.querySelectorAll('.ptab').forEach(t => t.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
-  document.querySelectorAll('.ptab')[idx].classList.add('active');
-}
-function sw(id, idx) {
-  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
-  document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
-  document.querySelectorAll('.mobile-nav-item').forEach(n => n.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
-  document.querySelectorAll('.nav-item')[idx].classList.add('active');
-  document.querySelectorAll('.mobile-nav-item')[idx].classList.add('active');
-  window.scrollTo(0, 0);
-}
-function toggleZap(head) {
-  const body = head.nextElementSibling;
-  const arrow = head.querySelector('.zap-arrow');
-  const open = body.classList.toggle('open');
-  arrow.classList.toggle('open', open);
-}
-
-// ─── ENTER ────────────────────────────────────────────────
-document.getElementById('auth-pass').addEventListener('keydown', e => {
-  if (e.key === 'Enter') doLogin();
-});
-document.getElementById('auth-email').addEventListener('keydown', e => {
-  if (e.key === 'Enter') document.getElementById('auth-pass').focus();
-});
-
-// ─── СТАРТ ────────────────────────────────────────────────
-(function init() {
-  const s = getSession();
-  if (s) applySession(s.role);
-  setInterval(checkSession, CHECK_INTERVAL);
-})();
-</script>
-</body>
-</html>
