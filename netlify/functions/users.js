@@ -1,112 +1,78 @@
-const https = require("https");
+// Проста база даних користувачів прямо в пам'яті (для Netlify Functions)
+// У реальному проєкті краще підключити MongoDB/Supabase, але для тесту міняємо тут:
+let users = [
+  { email: "admin@orbita.com", pass: "admin123", role: "admin", status: "active" }
+];
 
-const ADMIN_EMAIL = "admin@orbita.com";
-const ADMIN_PASS = "orbita2025";
-const FB_URL = "orbita-scripts-education-default-rtdb.firebaseio.com";
-const FB_SECRET = "e9EK7Ci6Nj2VKIOiWwZAewJXIPAvTnI6gAh5ibMA";
-
-function resp(statusCode, body) {
-  return {
-    statusCode,
-    headers: {
-      "Content-Type": "application/json",
-      "Access-Control-Allow-Origin": "*",
-      "Access-Control-Allow-Headers": "Content-Type",
-      "Access-Control-Allow-Methods": "GET,POST,OPTIONS",
-    },
-    body: JSON.stringify(body),
+exports.handler = async (event, context) => {
+  // Дозволяємо CORS-запити
+  const headers = {
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Headers": "Content-Type",
+    "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+    "Content-Type": "application/json"
   };
-}
 
-function fbRequest(method, path, data) {
-  return new Promise((resolve, reject) => {
-    const url = `https://${FB_URL}${path}.json?auth=${FB_SECRET}`;
-    const body = data ? JSON.stringify(data) : null;
-    const options = { method, headers: { "Content-Type": "application/json" } };
-    const req = https.request(url, options, (res) => {
-      let raw = "";
-      res.on("data", (c) => (raw += c));
-      res.on("end", () => { try { resolve(JSON.parse(raw)); } catch { resolve(null); } });
-    });
-    req.on("error", reject);
-    if (body) req.write(body);
-    req.end();
-  });
-}
+  if (event.httpMethod === "OPTIONS") {
+    return { statusCode: 200, headers, body: "" };
+  }
 
-async function getUsers() {
-  const data = await fbRequest("GET", "/users");
-  if (!data) return [];
-  return Object.values(data);
-}
+  const method = event.httpMethod;
 
-async function saveUsers(users) {
-  const obj = {};
-  users.forEach((u, i) => { obj[i] = u; });
-  await fbRequest("PUT", "/users", obj);
-}
+  // GET запит: Отримання списку або перевірка статусу
+  if (method === "GET") {
+    const emailParam = event.queryStringParameters && event.queryStringParameters.email;
+    if (emailParam) {
+      return { statusCode: 200, headers, body: JSON.stringify({ users }) };
+    }
+    return { statusCode: 200, headers, body: JSON.stringify({ users }) };
+  }
 
-exports.handler = async (event) => {
-  if (event.httpMethod === "OPTIONS") return resp(200, {});
+  // POST запит: Логіка авторизації, створення та блокування
+  if (method === "POST") {
+    try {
+      const data = JSON.parse(event.body);
+      const { action, email, pass, status } = data;
 
-  if (event.httpMethod === "POST") {
-    let body;
-    try { body = JSON.parse(event.body || "{}"); } catch { return resp(400, { error: "Bad JSON" }); }
-    const { action, email = "", pass = "", token = "" } = body;
-    const e = email.trim().toLowerCase();
-
-    if (action === "login") {
-      if (e === ADMIN_EMAIL.toLowerCase() && pass === ADMIN_PASS) {
-        return resp(200, { role: "admin", token: "admin-token" });
+      // 1. ВХІД (LOGIN)
+      if (action === "login") {
+        const user = users.find(u => u.email === email && u.pass === pass);
+        if (!user) {
+          return { statusCode: 401, headers, body: JSON.stringify({ error: "Неправильний логін або пароль" }) };
+        }
+        if (user.status === "blocked") {
+          return { statusCode: 403, headers, body: JSON.stringify({ error: "Ваш акаунт заблоковано!" }) };
+        }
+        return { statusCode: 200, headers, body: JSON.stringify({ user }) };
       }
-      const users = await getUsers();
-      const found = users.find(u => u.email.toLowerCase() === e && u.pass === pass);
-      if (found) return resp(200, { role: "viewer", token: found.token });
-      return resp(401, { error: "Невірна пошта або пароль" });
-    }
 
-    if (action === "check") {
-      if (e === ADMIN_EMAIL.toLowerCase() && token === "admin-token") return resp(200, { valid: true });
-      const users = await getUsers();
-      const found = users.find(u => u.email.toLowerCase() === e && u.token === token);
-      return resp(200, { valid: !!found });
-    }
+      // 2. СТВОРЕННЯ КОРИСТУВАЧА (CREATE)
+      if (action === "create") {
+        const exists = users.find(u => u.email === email);
+        if (exists) {
+          return { statusCode: 400, headers, body: JSON.stringify({ error: "Такий користувач вже існує" }) };
+        }
+        const newUser = { email, pass, role: "manager", status: "active" };
+        users.push(newUser);
+        return { statusCode: 200, headers, body: JSON.stringify({ success: true, user: newUser }) };
+      }
 
-    if (action === "add") {
-      if (e !== ADMIN_EMAIL.toLowerCase() || token !== "admin-token") return resp(403, { error: "Немає доступу" });
-      const ne = (body.newEmail || "").trim().toLowerCase();
-      const np = (body.newPass || "").trim();
-      if (!ne || !np) return resp(400, { error: "Заповніть пошту і пароль" });
-      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(ne)) return resp(400, { error: "Невірний формат пошти" });
-      if (ne === ADMIN_EMAIL.toLowerCase()) return resp(400, { error: "Ця пошта зайнята адміном" });
-      const users = await getUsers();
-      if (users.find(u => u.email.toLowerCase() === ne)) return resp(400, { error: "Такий користувач вже існує" });
-      const newToken = Math.random().toString(36).slice(2) + Date.now().toString(36);
-      users.push({ email: ne, pass: np, token: newToken });
-      await saveUsers(users);
-      return resp(200, { success: true, users: users.map(u => ({ email: u.email })) });
-    }
+      // 3. ЗМІНА СТАТУСУ / БЛОКУВАННЯ (UPDATE STATUS)
+      if (action === "updateStatus") {
+        const user = users.find(u => u.email === email);
+        if (user) {
+          user.status = status;
+          return { statusCode: 200, headers, body: JSON.stringify({ success: true, user }) };
+        }
+        return { statusCode: 404, headers, body: JSON.stringify({ error: "Користувача не знайдено" }) };
+      }
 
-    if (action === "delete") {
-      if (e !== ADMIN_EMAIL.toLowerCase() || token !== "admin-token") return resp(403, { error: "Немає доступу" });
-      const te = (body.targetEmail || "").trim().toLowerCase();
-      const users = await getUsers();
-      const filtered = users.filter(u => u.email.toLowerCase() !== te);
-      await saveUsers(filtered);
-      return resp(200, { success: true, users: filtered.map(u => ({ email: u.email })) });
-    }
+      return { statusCode: 400, headers, body: JSON.stringify({ error: "Невідома дія" }) };
 
-    return resp(400, { error: "Невідома дія" });
+    } catch (err) {
+      return { statusCode: 500, headers, body: JSON.stringify({ error: "Помилка сервера: " + err.message }) };
+    }
   }
 
-  if (event.httpMethod === "GET") {
-    const p = event.queryStringParameters || {};
-    if ((p.email || "").toLowerCase() !== ADMIN_EMAIL.toLowerCase() || p.token !== "admin-token") {
-      return resp(403, { error: "Немає доступу" });
-    }
-    const users = await getUsers();
-    return resp(200, { users: users.map(u => ({ email: u.email })) });
-  }
-
-  return resp(405, { error: "Method not allowed" });
+  return { statusCode: 405, headers, body: JSON.stringify({ error: "Метод не підтримується" }) };
 };
